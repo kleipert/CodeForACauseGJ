@@ -23,6 +23,8 @@ namespace Player
 		public float BoostStrength = 1.1f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
+		[Tooltip("Which movement ability has the player at the moment. 1 = Sprint, 2 = Jetpack, 3 = ")]
+		public int MovementAbility = 1;
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -152,7 +154,12 @@ namespace Player
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			float targetSpeed;
+			if (_input.jump && MovementAbility == 1)
+				targetSpeed = SprintSpeed;
+			else
+				targetSpeed = MoveSpeed;
+			
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -205,7 +212,10 @@ namespace Player
 			
 			if (_input.jump)
 			{
-				_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity);
+				if (MovementAbility == 2)
+				{
+					_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity);
+				}
 			}
 			
 			_verticalVelocity += Gravity * Time.deltaTime;
