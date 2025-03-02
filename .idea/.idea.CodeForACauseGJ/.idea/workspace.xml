@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="Movementtyp 3">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" afterDir="false" />
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[UPDATE] apply changes to prefab">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +37,17 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1adcb970be0847609d15f8a671c3af281f9200/48/13e4e9df/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/PlayerDevScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/PlayerDevScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/WW2.unity.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/BasicRigidBodyPush.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/FirstPersonController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@89eb3bdcd743/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9e6ebc012b944bf1ac9a620fd8e232d19b8a00/8c/25899f5d/EditorApplication.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/f1/db8a7570/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -85,9 +94,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -98,9 +104,6 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
-      <option name="runtimes">
-        <list />
-      </option>
       <option name="selectedOptions">
         <list />
       </option>
