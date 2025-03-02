@@ -8,13 +8,13 @@ namespace Player
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed = 4.0f;
+		public float MoveSpeed = 20.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
-		public float SprintSpeed = 6.0f;
+		public float SprintSpeed = 30.0f;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
-		public float SpeedChangeRate = 10.0f;
+		public float SpeedChangeRate = 0.7f;
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
@@ -205,7 +205,7 @@ namespace Player
 
 		private void JumpAndGravity()
 		{
-			if (_verticalVelocity < Gravity / 2)
+			if (_verticalVelocity < Gravity / 2 && Grounded)
 			{
 				_verticalVelocity = Gravity / 2;
 			}
@@ -214,7 +214,7 @@ namespace Player
 			{
 				if (MovementAbility == 2)
 				{
-					_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity);
+					_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity * Time.deltaTime);
 				}
 			}
 			

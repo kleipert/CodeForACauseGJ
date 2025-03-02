@@ -1,53 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Materials/FX/PolygonBattleRoyale_FX_Dirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Materials/FX/PolygonBattleRoyale_FX_Dirt.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/ReflectionProbe-0.exr.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Soft_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Soft_FX.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_FX.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Bats_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Bats_Mat_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Blank.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Blank.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Moon_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Moon_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Portal_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Portal_Mat_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Sunbeam_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Sunbeam_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/WindStreak_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/WindStreak_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Destroyed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Destroyed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Frame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Frame.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_British_Vehicles_01_Damaged.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_British_Vehicles_01_Damaged.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_Cloud_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_Cloud_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_FX_Emission.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_FX_Emission.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_TankTrack_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_TankTrack_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_British_Vehicles_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_British_Vehicles_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_German_Vehicles_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_German_Vehicles_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Mat_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Plane.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Plane.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2th9hzIRKe73Jmye5W1JTMJhGBE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,10 +31,58 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "cop__register",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.37f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\SRC\GJ_02_2025\CodeForACauseGJ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\SRC\GJ_02_2025\CodeForACauseGJ" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.37f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\SRC\GJ_02_2025\CodeForACauseGJ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\SRC\GJ_02_2025\CodeForACauseGJ" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,11 +92,16 @@
       <option name="presentableId" value="Default" />
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
+      <workItem from="1740920936097" duration="4747000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>

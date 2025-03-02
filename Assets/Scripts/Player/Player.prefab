@@ -70,13 +70,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17b29eda669a4747bdea18689f67e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 6
+  MoveSpeed: 20
+  SprintSpeed: 30
   RotationSpeed: 1
-  SpeedChangeRate: 10
+  SpeedChangeRate: 0.7
   JumpHeight: 1.2
   BoostStrength: 1.1
   Gravity: -22
+  MovementAbility: 1
   JumpTimeout: 0.1
   FallTimeout: 0.15
   Grounded: 1
