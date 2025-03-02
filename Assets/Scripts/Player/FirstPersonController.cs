@@ -1,6 +1,7 @@
 using InputSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -22,6 +23,8 @@ namespace Player
 		[Tooltip("Boost Strength")]
 		public float BoostStrength = 1.1f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
+		public float GravityBase = -15.0f;
+		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 		[Tooltip("Which movement ability has the player at the moment. 1 = Sprint, 2 = Jetpack, 3 = ")]
 		public int MovementAbility = 1;
@@ -41,6 +44,14 @@ namespace Player
 		public float GroundedRadius = 0.5f;
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
+		[Tooltip("What layers the character uses to grapple")]
+		public LayerMask GrappleLayers;
+		[Tooltip("Is the player currently grappling")]
+		public bool IsGrappling;
+		[FormerlySerializedAs("GrappleTarget")] [Tooltip("GrappleTarget")]
+		public Vector3 GrappleDirection;
+		[Tooltip("GrapplePosition")]
+		public Vector3 GrapplePosition;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -52,6 +63,7 @@ namespace Player
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
+		private LineRenderer _lr;
 
 		// player
 		private float _speed;
@@ -91,6 +103,10 @@ namespace Player
 			if (_mainCamera == null)
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				_lr = GetComponent<LineRenderer>();
+				_lr.material = new Material(Shader.Find("Sprites/Default"));
+				_lr.widthMultiplier = 0.1f;
+				_lr.enabled = false;
 			}
 		}
 
@@ -205,6 +221,40 @@ namespace Player
 
 		private void JumpAndGravity()
 		{
+
+			if (IsGrappling)
+			{
+				_controller.Move(GrappleDirection.normalized * Time.deltaTime * SprintSpeed);
+				_input.move = Vector2.zero;
+				if ((GrapplePosition - transform.position).magnitude <= 2)
+				{
+					IsGrappling = false;
+					_lr.enabled = false;
+					GrappleDirection = Vector3.zero;
+				}
+				return;
+			}
+			
+			if (_input.jump && MovementAbility == -1)
+			{
+				Gravity = 0;
+				RaycastHit rc_hit;
+				if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit, 50,
+					    GrappleLayers))
+				{
+					IsGrappling = true;
+					_lr.positionCount = 2;
+					
+					GrapplePosition = rc_hit.point;
+					_lr.SetPosition(0, transform.position);
+					_lr.SetPosition(1, GrapplePosition);
+					_lr.enabled = true;
+					GrappleDirection = rc_hit.point - transform.position;
+				}
+			}
+			else
+				Gravity = GravityBase;
+			
 			if (_verticalVelocity < Gravity / 2 && Grounded)
 			{
 				_verticalVelocity = Gravity / 2;
