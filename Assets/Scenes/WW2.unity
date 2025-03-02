@@ -38925,7 +38925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528692017430107048, guid: 3bff140291b5ee047ba050884053195c, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6528692017430107051, guid: 3bff140291b5ee047ba050884053195c, type: 3}
       propertyPath: m_RootOrder
@@ -56972,11 +56972,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2417465968867516905, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: MoveSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
+      propertyPath: JetpackLoss
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: SprintSpeed
@@ -56984,7 +56988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: BoostStrength
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: MovementAbility
@@ -56994,17 +56998,21 @@ PrefabInstance:
       propertyPath: SpeedChangeRate
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 3181165816697374704, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
+      propertyPath: analogMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3929514584002017280, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5141177091207449793, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6410498871126417892, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9069822031472607052, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_LocalPosition.x

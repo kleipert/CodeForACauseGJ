@@ -20,11 +20,32 @@ namespace Player
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
 		[Tooltip("Boost Strength")]
-		public float BoostStrength = 1.1f;
+		public float BoostStrength = 100f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 		[Tooltip("Which movement ability has the player at the moment. 1 = Sprint, 2 = Jetpack, 3 = ")]
 		public int MovementAbility = 1;
+		[Tooltip("How much energy the jetpack possesses. The engine default is 100f")]
+		public float JetpackStorage = 100.0f;
+		[Tooltip("How much energy the jetpack losses. The engine default is 100f")]
+		public float JetpackLoss = 75.0f;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public float DashSpeed = 5.0f;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public float DashDuration = 1.0f;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public float BaseDuration = 1.0f;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public bool DashActive = false;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public float DashCooldown = 0.0f;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public Vector3 SaveVector = Vector3.zero;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public Vector2 SaveInput = Vector2.zero;
+		[Tooltip("How fast the player dash. The engine default is 100f")]
+		public Vector2 SaveVelocity = Vector3.zero;
+		
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -154,11 +175,11 @@ namespace Player
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed;
-			if (_input.jump && MovementAbility == 1)
+			float targetSpeed = MoveSpeed;
+			/*if (_input.jump && MovementAbility == 1)
 				targetSpeed = SprintSpeed;
 			else
-				targetSpeed = MoveSpeed;
+				targetSpeed = MoveSpeed;*/
 			
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
@@ -208,14 +229,57 @@ namespace Player
 			if (_verticalVelocity < Gravity / 2 && Grounded)
 			{
 				_verticalVelocity = Gravity / 2;
+				if (JetpackStorage < 100)
+				{
+					JetpackStorage += (JetpackLoss * Time.deltaTime);
+				}
 			}
 			
 			if (_input.jump)
 			{
-				if (MovementAbility == 2)
+				if (MovementAbility == 2 && JetpackStorage >= 0.0f)
 				{
 					_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity * Time.deltaTime);
+					JetpackStorage -= (JetpackLoss * Time.deltaTime);
 				}
+					
+			}
+			
+			if (MovementAbility == 1 && _input.jump && !DashActive && DashCooldown <= 0.0f)
+			{
+				DashActive = true;
+				if (_input.move != Vector2.zero)
+				{
+					SaveVector = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+					SaveInput = _input.move;
+					SaveVelocity = _controller.velocity;
+				}
+			}
+			
+			if (DashDuration > 0.0f && DashActive)
+			{
+				Vector3 globalPosition = transform.TransformDirection(SaveVector).normalized;
+				_controller.Move(globalPosition * (Time.deltaTime * DashSpeed));
+				DashDuration -= Time.deltaTime;
+				_input.move = Vector2.zero;
+			}
+
+			if (DashDuration <= 0.0f)
+			{
+				SaveVector = Vector3.zero;
+				DashDuration = BaseDuration;
+				DashActive = false;
+				DashCooldown = 3.0f;
+				if (Input.anyKey)
+				{
+					_input.move = SaveInput;
+					_controller.Move(SaveVelocity * Time.deltaTime);
+				}
+			}
+			
+			if (DashCooldown >= 0.0f && !DashActive)
+			{
+				DashCooldown -= Time.deltaTime;
 			}
 			
 			_verticalVelocity += Gravity * Time.deltaTime;
