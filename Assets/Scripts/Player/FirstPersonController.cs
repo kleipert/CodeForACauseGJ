@@ -245,7 +245,7 @@ namespace Player
 
 			if (IsGrappling)
 			{
-				_controller.Move(GrappleDirection.normalized * Time.deltaTime * SprintSpeed);
+				_controller.Move(GrappleDirection.normalized * (Time.deltaTime * SprintSpeed));
 				_input.move = Vector2.zero;
 				if ((GrapplePosition - transform.position).magnitude <= 2)
 				{
@@ -256,7 +256,7 @@ namespace Player
 				return;
 			}
 			
-			if (_input.jump && MovementAbility == -1)
+			if (_input.jump && MovementAbility == 3)
 			{
 				Gravity = 0;
 				RaycastHit rc_hit;
