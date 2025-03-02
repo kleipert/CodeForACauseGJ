@@ -125,7 +125,7 @@ namespace Player
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 				_lr = GetComponent<LineRenderer>();
-				_lr.material = new Material(Shader.Find("Sprites/Default"));
+				//_lr.material = new Material(Shader.Find("Sprites/Default"));
 				_lr.widthMultiplier = 0.1f;
 				_lr.enabled = false;
 			}
