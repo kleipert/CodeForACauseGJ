@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Materials/FX/PolygonBattleRoyale_FX_Dirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Materials/FX/PolygonBattleRoyale_FX_Dirt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonBattleRoyale/Scenes/Demo/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_FX.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Glow_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Soft_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_Circle_Soft_FX.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Additive_FX.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Bats_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Bats_Mat_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Blank.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Blank.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Moon_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Moon_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Portal_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Portal_Mat_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Sunbeam_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/Sunbeam_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/WindStreak_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDarkFantasy/FX/FX_Materials/WindStreak_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Destroyed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Destroyed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Frame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_Blimp_Frame.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_British_Vehicles_01_Damaged.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Alts/PolygonWarMap_British_Vehicles_01_Damaged.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_Cloud_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_Cloud_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_FX_Emission.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_FX_Emission.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_TankTrack_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/Misc/PolygonWarMap_TankTrack_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_British_Vehicles_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_British_Vehicles_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_German_Vehicles_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_German_Vehicles_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Mat_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Plane.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonWarMap/Materials/PolygonWarMap_Plane.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2th9hzIRKe73Jmye5W1JTMJhGBE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "cop__register",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="" />
+      <created>1740793563296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740793563296</updated>
+      <workItem from="1740793565971" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
