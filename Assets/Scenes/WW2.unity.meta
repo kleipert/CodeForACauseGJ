@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 127eef1a2557dfc4eaa4567709a74069
+<<<<<<<< HEAD:Assets/Scenes/PlayerDevScene.unity.meta
+guid: 28e461651bc111b4b9c90a4f056f922b
+========
+guid: 72a7f1ee9f76700498d03dd316a45572
+>>>>>>>> main:Assets/Scenes/WW2.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
