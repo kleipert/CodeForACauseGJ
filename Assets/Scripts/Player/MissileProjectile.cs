@@ -13,6 +13,7 @@ namespace Player
         [SerializeField] private float _explosionForce = 100f;
         private Vector3 _target;
         private bool _isFired;
+        private BoxCollider _collider;
 
 
         public void SetTarget(Vector3 target) => _target = target;
@@ -22,6 +23,8 @@ namespace Player
         private void Awake()
         {
             _isFired = false;
+            _collider = GetComponent<BoxCollider>();
+            _collider.enabled = false;
         }
 
         // Update is called once per frame
@@ -29,6 +32,7 @@ namespace Player
         {
             if (_isFired)
             {
+                _collider.enabled = true;
                 transform.position = Vector3.MoveTowards(transform.position,
                     _target, _speed * Time.deltaTime);
             }
