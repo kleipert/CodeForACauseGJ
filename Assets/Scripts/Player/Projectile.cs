@@ -36,7 +36,7 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag != "Player")
+            if (!other.gameObject.CompareTag("Player"))
             {
                 Transform _finalTransform = transform;
                 Destroy(gameObject);
@@ -46,8 +46,9 @@ namespace Player
                 {
                     if (coll.CompareTag(TagHandle.GetExistingTag("Player")))
                     {
-                        Debug.Log("Hit Player with explosion");
-                        PlayerManager.Instance.MovePlayer(Vector3.up, _explosionForce);
+                        Vector3 dir = coll.gameObject.transform.position - _finalTransform.position;
+                        dir.y += 1.5f;
+                        PlayerManager.Instance.MovePlayer(dir, _explosionForce);
                     }
                 }
             }
@@ -55,7 +56,7 @@ namespace Player
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.DrawSphere(transform.position, _explosionRadius);
+            //Gizmos.DrawSphere(transform.position, _explosionRadius);
         }
     }
 }

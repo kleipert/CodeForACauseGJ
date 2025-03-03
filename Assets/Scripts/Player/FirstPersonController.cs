@@ -18,8 +18,6 @@ namespace Player
 		public float SpeedChangeRate = 0.7f;
 
 		[Space(10)]
-		[Tooltip("The height the player can jump")]
-		public float JumpHeight = 1.2f;
 		[Tooltip("Boost Strength")]
 		public float BoostStrength = 100f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
@@ -51,10 +49,6 @@ namespace Player
 		
 
 		[Space(10)]
-		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
-		public float JumpTimeout = 0.1f;
-		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
-		public float FallTimeout = 0.15f;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
@@ -90,11 +84,6 @@ namespace Player
 		private float _speed;
 		private float _rotationVelocity;
 		[SerializeField]private float _verticalVelocity;
-		private float _terminalVelocity = 53.0f;
-
-		// timeout deltatime
-		private float _jumpTimeoutDelta;
-		private float _fallTimeoutDelta;
 
 
 #if ENABLE_INPUT_SYSTEM
@@ -139,10 +128,6 @@ namespace Player
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
-			// reset our timeouts on start
-			_jumpTimeoutDelta = JumpTimeout;
-			_fallTimeoutDelta = FallTimeout;
 		}
 
 		private void Update()
@@ -253,7 +238,7 @@ namespace Player
 				return;
 			}
 			
-			if (_input.jump && MovementAbility == 3)
+			if (_input.jump && MovementAbility == (int) MovementType.Grapple)
 			{
 				Gravity = 0;
 				RaycastHit rc_hit;
@@ -284,7 +269,7 @@ namespace Player
 			
 			if (_input.jump)
 			{
-				if (MovementAbility == 2 && JetpackStorage >= 0.0f)
+				if (MovementAbility == (int) MovementType.JetPack && JetpackStorage >= 0.0f)
 				{
 					_verticalVelocity = Mathf.Sqrt(BoostStrength * -2f * Gravity * Time.deltaTime);
 					JetpackStorage -= (JetpackLoss * Time.deltaTime);
@@ -292,7 +277,7 @@ namespace Player
 					
 			}
 			
-			if (MovementAbility == 1 && _input.jump && !DashActive && DashCooldown <= 0.0f)
+			if (MovementAbility == (int) MovementType.Dash && _input.jump && !DashActive && DashCooldown <= 0.0f)
 			{
 				DashActive = true;
 				if (_input.move != Vector2.zero)
@@ -353,4 +338,12 @@ namespace Player
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
 	}
+
+    public enum MovementType:int
+    {
+	    Debug = -1,
+	    Dash = 1,
+	    JetPack = 2,
+	    Grapple = 3
+    }
 }

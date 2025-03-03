@@ -22,6 +22,11 @@ namespace Managers
         {
             _player.GetComponent<PlayerImpactHandler>().AddImpact(dir, strength);
         }
+
+        public void SetMovementAbility(MovementType movementType)
+        {
+            _player.GetComponent<FirstPersonController>().MovementAbility = (int)movementType;
+        }
         
     }
 }

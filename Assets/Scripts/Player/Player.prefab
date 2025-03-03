@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1916364181525599695}
   - component: {fileID: 2939988710707862861}
   - component: {fileID: 2713151217697693914}
+  - component: {fileID: 3799168596150510791}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -140,7 +141,7 @@ MonoBehaviour:
   GrapplePosition: {x: 0, y: 0, z: 0}
   CinemachineCameraTarget: {fileID: 3929514584002017280}
   TopClamp: 60
-  BottomClamp: -60
+  BottomClamp: -90
   _verticalVelocity: 0
 --- !u!114 &3736198029359126147
 MonoBehaviour:
@@ -353,7 +354,19 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 3405466096491196235, guid: 346c8036735d2f1448af96b97d2e1ebf, type: 3}
   _projectileTarget: {fileID: 1726245284170822692}
   _projectileSpeed: 2
-  _baseCooldown: 1
+  _baseCooldown: 3
+--- !u!114 &3799168596150510791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417465968867516905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb70cac7ced7624fa8b76562ae1f50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3929514584002017280
 GameObject:
   m_ObjectHideFlags: 0

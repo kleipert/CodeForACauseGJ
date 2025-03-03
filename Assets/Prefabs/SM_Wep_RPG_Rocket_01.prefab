@@ -106,7 +106,7 @@ MonoBehaviour:
     m_Bits: 128
   _speed: 40
   _explosionRadius: 3
-  _explosionForce: 50
+  _explosionForce: 25
 --- !u!65 &5902379424928591297
 BoxCollider:
   m_ObjectHideFlags: 0

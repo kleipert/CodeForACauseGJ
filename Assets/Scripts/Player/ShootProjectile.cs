@@ -9,12 +9,9 @@ namespace Player
     {
         [SerializeField] private GameObject _projectilePrefab;
         [SerializeField] private Transform _projectileTarget;
-        [SerializeField] private float _projectileSpeed = 2f;
-        [SerializeField] private float _baseCooldown = 1f;
+        [SerializeField] private float _baseCooldown = 3f;
         
-        private CharacterController _controller;
         private InputSettingsInput _input;
-        private PlayerInput _playerInput;
         private GameObject _mainCamera;
         private bool _isLoaded;
         private GameObject _loadedProjectile;
@@ -24,9 +21,7 @@ namespace Player
     
         void Start()
         {
-            _controller = GetComponent<CharacterController>();
             _input = GetComponent<InputSettingsInput>();
-            _playerInput = GetComponent<PlayerInput>();
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             _loadedProjectile = Instantiate(_projectilePrefab, _projectileTarget.transform.position, _projectileTarget.transform.rotation, _projectileTarget);
             _isLoaded = true;
@@ -43,7 +38,7 @@ namespace Player
                 RaycastHit rc_hit;
                 if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit))
                 {
-                    Debug.DrawLine(_mainCamera.transform.position, rc_hit.point, Color.magenta, 120);
+                    //Debug.DrawLine(_mainCamera.transform.position, rc_hit.point, Color.magenta, 120);
                     _loadedProjectile.transform.SetParent(null);
                     _loadedProjectile.GetComponent<Projectile>().SetTarget(rc_hit.point);
                     _loadedProjectile.GetComponent<Projectile>().SetFired(true);
