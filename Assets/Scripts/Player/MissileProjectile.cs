@@ -1,4 +1,5 @@
 using System;
+using Enemies;
 using Managers;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace Player
         [SerializeField] private float _speed = 2f;
         [SerializeField] private float _explosionRadius = 3f;
         [SerializeField] private float _explosionForce = 100f;
+        [SerializeField] private Transform _explosionPoint;
         private Vector3 _target;
         private bool _isFired;
         private BoxCollider _collider;
@@ -42,7 +44,7 @@ namespace Player
         {
             if (!other.gameObject.CompareTag("Player"))
             {
-                Transform _finalTransform = transform;
+                Transform _finalTransform = _explosionPoint;
                 Destroy(gameObject);
                 Collider[] colliders = Physics.OverlapSphere(_finalTransform.position, _explosionRadius);
                 // Trigger VFX + Sound?
@@ -53,6 +55,16 @@ namespace Player
                         Vector3 dir = coll.gameObject.transform.position - _finalTransform.position;
                         dir.y += 1.5f;
                         PlayerManager.Instance.MovePlayer(dir, _explosionForce);
+                    }
+                    
+                    if (coll.CompareTag(TagHandle.GetExistingTag("Enemy")))
+                    {
+                        Vector3 enemyTransformPos = coll.gameObject.transform.position;
+                        enemyTransformPos.y += coll.bounds.size.y / 2;
+                        Vector3 dir = enemyTransformPos - _finalTransform.position;
+                        if (dir.y <= 0)
+                            dir.y = 0;
+                        coll.GetComponent<EnemyKnockbackFromMissile>().GotHit(dir);
                     }
                 }
             }
