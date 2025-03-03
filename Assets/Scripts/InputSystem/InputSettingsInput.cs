@@ -9,12 +9,19 @@ namespace InputSystem
         public Vector2 look;
         public bool jump;
         public bool sprint;
+        public bool shot;
 
         [Header("Movement Settings")] public bool analogMovement;
 
         [Header("Mouse Cursor Settings")] public bool cursorLocked = true;
         public bool cursorInputForLook = true;
 
+        
+        public void OnShoot(InputValue value)
+        {
+            ShotInput(value.isPressed);
+        }
+        
         public void OnMove(InputValue value)
         {
             MoveInput(value.Get<Vector2>());
@@ -58,7 +65,10 @@ namespace InputSystem
             sprint = newSprintState;
         }
         
-        //public bool IsSpacebarPressed() => 
+        public void ShotInput(bool value)
+        {
+            shot = value;
+        }
 
         private void OnApplicationFocus(bool hasFocus)
         {

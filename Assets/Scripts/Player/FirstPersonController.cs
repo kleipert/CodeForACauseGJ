@@ -96,7 +96,7 @@ namespace Player
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
 #endif
@@ -125,7 +125,6 @@ namespace Player
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 				_lr = GetComponent<LineRenderer>();
-				//_lr.material = new Material(Shader.Find("Sprites/Default"));
 				_lr.widthMultiplier = 0.1f;
 				_lr.enabled = false;
 			}
@@ -192,11 +191,7 @@ namespace Player
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
 			float targetSpeed = MoveSpeed;
-			/*if (_input.jump && MovementAbility == 1)
-				targetSpeed = SprintSpeed;
-			else
-				targetSpeed = MoveSpeed;*/
-			
+
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -227,6 +222,8 @@ namespace Player
 
 			// normalise input direction
 			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+
+			
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
@@ -327,6 +324,7 @@ namespace Player
 				}
 			}
 			
+			
 			if (DashCooldown >= 0.0f && !DashActive)
 			{
 				DashCooldown -= Time.deltaTime;
@@ -334,54 +332,6 @@ namespace Player
 			
 			_verticalVelocity += Gravity * Time.deltaTime;
 			
-			
-			
-			/*
-			if (Grounded)
-			{
-				// reset the fall timeout timer
-				_fallTimeoutDelta = FallTimeout;
-
-				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
-				{
-					_verticalVelocity = -2f;
-				}
-
-				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-				{
-					// the square root of H * -2 * G = how much velocity needed to reach desired height
-					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-				}
-
-				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
-				{
-					_jumpTimeoutDelta -= Time.deltaTime;
-				}
-			}
-			else
-			{
-				// reset the jump timeout timer
-				_jumpTimeoutDelta = JumpTimeout;
-
-				// fall timeout
-				if (_fallTimeoutDelta >= 0.0f)
-				{
-					_fallTimeoutDelta -= Time.deltaTime;
-				}
-
-				// if we are not grounded, do not jump
-				_input.jump = false;
-			}
-
-			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-			if (_verticalVelocity < _terminalVelocity)
-			{
-				_verticalVelocity += Gravity * Time.deltaTime;
-			}
-			*/
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

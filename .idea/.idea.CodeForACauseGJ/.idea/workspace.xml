@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[UPDATE] apply changes to prefab">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Exterior/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Scenes/Demo_Interior/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerDevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerDevScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettings.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettings.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +50,19 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1adcb970be0847609d15f8a671c3af281f9200/48/13e4e9df/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/16/bf9bc3b5/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/PlayerDevScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/PlayerDevScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/WW2.unity.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/BasicRigidBodyPush.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/FirstPersonController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerImpactHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ShootProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@89eb3bdcd743/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -89,10 +106,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26644">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26644" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -137,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1740949294181</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[UPDATE] gitignore">
+      <created>1740950284340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740950284340</updated>
+    </task>
+    <task id="LOCAL-00004" summary="scheiß drauf, einfach commiten">
+      <created>1740950427435</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740950427435</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +210,8 @@
     <MESSAGE value="Movement" />
     <MESSAGE value="Mistakes were made" />
     <MESSAGE value="Movementtyp 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movementtyp 3" />
+    <MESSAGE value="[UPDATE] gitignore" />
+    <MESSAGE value="scheiß drauf, einfach commiten" />
+    <option name="LAST_COMMIT_MESSAGE" value="scheiß drauf, einfach commiten" />
   </component>
 </project>
