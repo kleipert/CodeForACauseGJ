@@ -27,6 +27,11 @@ namespace Managers
         {
             _player.GetComponent<FirstPersonController>().MovementAbility = (int)movementType;
         }
+
+        public MovementType GetCurrentMovementType()
+        {
+            return (MovementType) _player.GetComponent<FirstPersonController>().MovementAbility;
+        }
         
     }
 }

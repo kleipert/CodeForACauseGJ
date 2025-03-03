@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class Projectile : MonoBehaviour
+    public class MissileProjectile : MonoBehaviour
     {
 
         [SerializeField] LayerMask _player;

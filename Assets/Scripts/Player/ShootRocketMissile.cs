@@ -1,11 +1,10 @@
-using System;
 using InputSystem;
+using Managers;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class ShootProjectile : MonoBehaviour
+    public class ShootRocketMissile : MonoBehaviour
     {
         [SerializeField] private GameObject _projectilePrefab;
         [SerializeField] private Transform _projectileTarget;
@@ -23,14 +22,16 @@ namespace Player
         {
             _input = GetComponent<InputSettingsInput>();
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-            _loadedProjectile = Instantiate(_projectilePrefab, _projectileTarget.transform.position, _projectileTarget.transform.rotation, _projectileTarget);
-            _isLoaded = true;
             _activeCooldown = 0f;
+            _isLoaded = false;
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (PlayerManager.Instance.GetCurrentMovementType() != MovementType.JetPack) 
+                return;
+            
             if (_isLoaded && _input.shot && _activeCooldown <= 0f)
             {
                 _activeCooldown = _baseCooldown;
@@ -40,8 +41,8 @@ namespace Player
                 {
                     //Debug.DrawLine(_mainCamera.transform.position, rc_hit.point, Color.magenta, 120);
                     _loadedProjectile.transform.SetParent(null);
-                    _loadedProjectile.GetComponent<Projectile>().SetTarget(rc_hit.point);
-                    _loadedProjectile.GetComponent<Projectile>().SetFired(true);
+                    _loadedProjectile.GetComponent<MissileProjectile>().SetTarget(rc_hit.point);
+                    _loadedProjectile.GetComponent<MissileProjectile>().SetFired(true);
                 }
             }
 
@@ -52,7 +53,6 @@ namespace Player
             }
 
             _activeCooldown -= Time.deltaTime;
-
         }
     }
 }
