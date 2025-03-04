@@ -335,7 +335,6 @@ namespace Player
 			_verticalVelocity += Gravity * Time.deltaTime;
 			
 			
-			
 			/*
 			if (Grounded)
 			{

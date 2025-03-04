@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="Movementtyp 3">
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Medieval.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Medieval.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +41,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@89eb3bdcd743/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@15fef0f41df6/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9e6ebc012b944bf1ac9a620fd8e232d19b8a00/8c/25899f5d/EditorApplication.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/f1/db8a7570/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -117,6 +122,7 @@
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
       <workItem from="1740920936097" duration="4747000" />
+      <workItem from="1741015712674" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="Dash">
       <option name="closed" value="true" />
