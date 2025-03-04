@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="">
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SM_Wep_RPG_Rocket_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SM_Wep_RPG_Rocket_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockbackFromMissile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockbackFromMissile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1adcb970be0847609d15f8a671c3af281f9200/48/13e4e9df/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/16/bf9bc3b5/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/WW2.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockbackFromMissile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/WalkToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Managers/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -151,7 +153,7 @@
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
       <workItem from="1740920936097" duration="4747000" />
-      <workItem from="1741004102754" duration="32288000" />
+      <workItem from="1741004102754" duration="35676000" />
     </task>
     <task id="LOCAL-00001" summary="Dash">
       <option name="closed" value="true" />
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741016418487</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS">
+      <created>1741046328582</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741046328583</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +276,7 @@
     <MESSAGE value="[ADD] added shotgun and laser gun logic" />
     <MESSAGE value="[FIX] apply prefab changes" />
     <MESSAGE value="[FIX] fixed missle collider bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] fixed missle collider bug" />
+    <MESSAGE value="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS" />
   </component>
 </project>

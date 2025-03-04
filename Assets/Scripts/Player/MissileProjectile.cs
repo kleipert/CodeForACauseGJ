@@ -64,7 +64,7 @@ namespace Player
                         Vector3 dir = enemyTransformPos - _finalTransform.position;
                         if (dir.y <= 0)
                             dir.y = 0;
-                        coll.GetComponent<EnemyKnockbackFromMissile>().GotHit(dir);
+                        coll.GetComponent<EnemyKnockback>().GotHit(dir, 2);
                     }
                 }
             }

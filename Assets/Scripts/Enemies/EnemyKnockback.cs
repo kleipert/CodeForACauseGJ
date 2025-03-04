@@ -4,11 +4,10 @@ using UnityEngine.AI;
 
 namespace Enemies
 {
-    public class EnemyKnockbackFromMissile : MonoBehaviour
+    public class EnemyKnockback : MonoBehaviour
     {
 
-        [SerializeField] private Vector3 _currentVel;
-        [SerializeField] private float _upMultiplier = 2f;
+        [SerializeField] private float _upMultiplier;
         [SerializeField] private float _timeToActivateNav = 1.5f;
         private Rigidbody _rb;
         private NavMeshAgent _navAgent;
@@ -21,14 +20,8 @@ namespace Enemies
         {
             _rb = GetComponent<Rigidbody>();
             _navAgent = GetComponent<NavMeshAgent>();
+            _upMultiplier = 1f;
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-            _currentVel = _rb.linearVelocity;
-        }
-        
         private void FixedUpdate()
         {
             if (!_wasHit) return;
@@ -46,8 +39,9 @@ namespace Enemies
             _navAgent.enabled = true;
         }
 
-        public void GotHit(Vector3 dir)
+        public void GotHit(Vector3 dir, float multiplier)
         {
+            _upMultiplier = multiplier;
             _hitDir = dir;
             _wasHit = true;
         }

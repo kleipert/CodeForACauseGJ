@@ -59252,7 +59252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: MovementAbility
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2689782905568610676, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: SpeedChangeRate
@@ -59268,7 +59268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5024897838804697203, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5141177091207449793, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
@@ -59276,7 +59276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6128140668084250759, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6410498871126417892, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Layer
