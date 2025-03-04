@@ -7,6 +7,7 @@ namespace Enemies
     {
         [SerializeField] private GameObject _player;
         private NavMeshAgent _navAgent;
+        public static bool FollowPlayer = true;
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -17,8 +18,13 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
-            if(_navAgent.enabled)
-                _navAgent.SetDestination(_player.transform.position);
+            if (_navAgent.enabled)
+            {
+                if(FollowPlayer)
+                    _navAgent.SetDestination(_player.transform.position);
+                else
+                    _navAgent.SetDestination(transform.position);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using Enemies;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -11,8 +12,11 @@ namespace Player
         [SerializeField] LayerMask _player;
         [SerializeField] private float _speed = 2f;
         [SerializeField] private float _explosionRadius = 3f;
-        [SerializeField] private float _explosionForce = 100f;
+        [SerializeField] private float _explosionForcePlayer = 100f;
+        [SerializeField] private float _explosionForceEnemy = 2f;
         [SerializeField] private Transform _explosionPoint;
+        [SerializeField] private float _projectileLifetime = 3f;
+        private float _currentProjectileLifetime;
         private Vector3 _target;
         private bool _isFired;
         private BoxCollider _collider;
@@ -27,6 +31,7 @@ namespace Player
             _isFired = false;
             _collider = GetComponent<BoxCollider>();
             _collider.enabled = false;
+            _currentProjectileLifetime = _projectileLifetime;
         }
 
         // Update is called once per frame
@@ -37,6 +42,10 @@ namespace Player
                 _collider.enabled = true;
                 transform.position = Vector3.MoveTowards(transform.position,
                     _target, _speed * Time.deltaTime);
+                _currentProjectileLifetime -= Time.deltaTime;
+                
+                if(_currentProjectileLifetime <= 0)
+                    Destroy(gameObject);
             }
         }
 
@@ -54,7 +63,7 @@ namespace Player
                     {
                         Vector3 dir = coll.gameObject.transform.position - _finalTransform.position;
                         dir.y += 1.5f;
-                        PlayerManager.Instance.MovePlayer(dir, _explosionForce);
+                        PlayerManager.Instance.MovePlayer(dir, _explosionForcePlayer);
                     }
                     
                     if (coll.CompareTag(TagHandle.GetExistingTag("Enemy")))
@@ -64,7 +73,7 @@ namespace Player
                         Vector3 dir = enemyTransformPos - _finalTransform.position;
                         if (dir.y <= 0)
                             dir.y = 0;
-                        coll.GetComponent<EnemyKnockback>().GotHit(dir, 2);
+                        coll.GetComponent<EnemyKnockback>().GotHit(dir, _explosionForceEnemy);
                     }
                 }
             }

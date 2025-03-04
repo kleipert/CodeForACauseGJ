@@ -4,13 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[ADD] first walk animation">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx.meta" afterDir="false" />
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[ADD] first melee enemy">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Skeleton_Melee.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Skeleton_Melee/Skeleton_Run_Forward.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Skeleton_Melee/Skeleton_Run_Forward.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/AC_MeleeZombie.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/AC_MeleeZombie.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieDeath.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieDeath.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieGetHit.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieGetHit.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieMeleeAtk.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieMeleeAtk.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieRunning.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie_Melee/ZombieRunning.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/WW2_Zombie_Melee.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/WW2_Zombie_Melee.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAnimations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAnimations.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/HitBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/HitBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/MeleeZombie.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/LightingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/LightingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonDog/Scenes/Demo/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonZombies/Prefabs/Zombie_Military_Male_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonZombies/Prefabs/Zombie_Military_Male_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SM_Wep_RPG_Rocket_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SM_Wep_RPG_Rocket_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/WalkToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/WalkToPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +77,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1adcb970be0847609d15f8a671c3af281f9200/48/13e4e9df/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/16/bf9bc3b5/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scenes/WW2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAnimations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/WalkToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/InputSettingsInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Managers/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/BasicRigidBodyPush.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/FirstPersonController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Anwender/Documents/Projekte/Unity/CodeForACauseGJ/CodeForACauseGJ/Assets/Scripts/Player/MissileProjectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerImpactHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ShootMachineGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ShootRocketMissile.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,30 +105,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor & Play.executor": "Debug",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "cop__register",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor &amp; Play.executor&quot;: &quot;Debug&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cop__register&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Anwender\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Anwender\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Anwender\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Anwender\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Anwender\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Anwender\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.37f1\Editor\Unity.exe" />
@@ -121,10 +154,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28540">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29816">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28540" />
+      <option name="pid" value="29816" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -152,7 +185,8 @@
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
       <workItem from="1740920936097" duration="4747000" />
-      <workItem from="1741004102754" duration="37377000" />
+      <workItem from="1741004102754" duration="37426000" />
+      <workItem from="1741087411652" duration="25641000" />
     </task>
     <task id="LOCAL-00001" summary="Dash">
       <option name="closed" value="true" />
@@ -233,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741050066077</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[ADD] first walk animation">
+      <created>1741052372989</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741052372989</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +326,7 @@
     <MESSAGE value="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS" />
     <MESSAGE value="[UPDATE] shotgun knockback" />
     <MESSAGE value="[ADD] first walk animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] first walk animation" />
+    <MESSAGE value="[ADD] first melee enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] first melee enemy" />
   </component>
 </project>

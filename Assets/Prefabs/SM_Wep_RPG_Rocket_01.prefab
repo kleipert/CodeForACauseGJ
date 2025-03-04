@@ -138,8 +138,10 @@ MonoBehaviour:
     m_Bits: 128
   _speed: 40
   _explosionRadius: 3
-  _explosionForce: 5
+  _explosionForcePlayer: 5
+  _explosionForceEnemy: 10
   _explosionPoint: {fileID: 519944310247152501}
+  _projectileLifetime: 3
 --- !u!65 &5902379424928591297
 BoxCollider:
   m_ObjectHideFlags: 0

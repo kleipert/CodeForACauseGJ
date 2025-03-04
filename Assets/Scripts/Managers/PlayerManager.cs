@@ -32,6 +32,8 @@ namespace Managers
         {
             return (MovementType) _player.GetComponent<FirstPersonController>().MovementAbility;
         }
-        
+
+        public Transform GetPlayerTransform() => _player.transform;
+
     }
 }
