@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="Movementtyp 3">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FirstPersonController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[Update] Graveyard" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@89eb3bdcd743/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@15fef0f41df6/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9e6ebc012b944bf1ac9a620fd8e232d19b8a00/8c/25899f5d/EditorApplication.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/f1/db8a7570/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -117,6 +116,8 @@
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
       <workItem from="1740920936097" duration="4747000" />
+      <workItem from="1741015712674" duration="1368000" />
+      <workItem from="1741088519241" duration="1472000" />
     </task>
     <task id="LOCAL-00001" summary="Dash">
       <option name="closed" value="true" />
@@ -134,7 +135,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740949294181</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Update] Medieval">
+      <option name="closed" value="true" />
+      <created>1741052526625</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741052526625</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Update] Medieval">
+      <option name="closed" value="true" />
+      <created>1741095400009</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741095400009</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Update] Graveyard">
+      <option name="closed" value="true" />
+      <created>1741119877034</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741119877034</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +174,21 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="cop_register" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -159,7 +199,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="cop_register" />
                       </list>
                     </value>
                   </entry>
@@ -176,6 +216,8 @@
     <MESSAGE value="Movement" />
     <MESSAGE value="Mistakes were made" />
     <MESSAGE value="Movementtyp 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movementtyp 3" />
+    <MESSAGE value="[Update] Medieval" />
+    <MESSAGE value="[Update] Graveyard" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] Graveyard" />
   </component>
 </project>
