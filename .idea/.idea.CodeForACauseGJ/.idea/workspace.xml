@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS">
+    <list default="true" id="e50335ff-13c8-4fe5-8760-723f3bba02b3" name="Changes" comment="[ADD] first walk animation">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/AC_MeleeZombie.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Running.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeForACauseGJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ShotgunBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WW2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockbackFromMissile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockbackFromMissile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyKnockback.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MissileProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ShotgunProjectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +152,7 @@
       <updated>1740793563296</updated>
       <workItem from="1740793565971" duration="7000" />
       <workItem from="1740920936097" duration="4747000" />
-      <workItem from="1741004102754" duration="35676000" />
+      <workItem from="1741004102754" duration="37377000" />
     </task>
     <task id="LOCAL-00001" summary="Dash">
       <option name="closed" value="true" />
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741046328583</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[UPDATE] shotgun knockback">
+      <created>1741050066077</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741050066077</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +283,8 @@
     <MESSAGE value="[FIX] apply prefab changes" />
     <MESSAGE value="[FIX] fixed missle collider bug" />
     <MESSAGE value="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPDATE] I DONT EVEN KNOW WHAT WE DID HERE BUT IT WORKS" />
+    <MESSAGE value="[UPDATE] shotgun knockback" />
+    <MESSAGE value="[ADD] first walk animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] first walk animation" />
   </component>
 </project>
