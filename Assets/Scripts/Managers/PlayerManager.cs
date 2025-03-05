@@ -36,6 +36,11 @@ namespace Managers
         public Transform GetPlayerTransform() => _player.transform;
         
         public float GetPlayerVelocity() => _player.GetComponent<PlayerStats>().GetPlayerVelocity();
+        
+        public Vector3 GetPlayerPosition()
+        {
+            return _player.transform.position;
+        }
 
     }
 }

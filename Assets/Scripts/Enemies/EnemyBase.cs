@@ -24,18 +24,19 @@ namespace Enemies
         
         }
 
-        private void OnCollisionEnter(Collision collision)
+        /*private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
+            if (other.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
             {
                 PerformMeleeAttack();
                 _playerStats.ReceiveDamagePlayer(damage);
             }
-        }
+        }*/
 
-        private void PerformMeleeAttack()
+        public void PerformMeleeAttack()
         {
             _animations.PlayMeleeAttackAnimation();
+            //_playerStats.ReceiveDamagePlayer(damage);
         }
 
         public EnemyType GetEnemyType() => type;

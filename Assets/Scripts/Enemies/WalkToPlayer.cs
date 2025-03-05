@@ -7,7 +7,7 @@ namespace Enemies
     {
         [SerializeField] private GameObject _player;
         private NavMeshAgent _navAgent;
-        public static bool FollowPlayer = true;
+        public bool FollowPlayer = true;
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()

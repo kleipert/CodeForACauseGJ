@@ -1,3 +1,4 @@
+using System;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -35,5 +36,11 @@ public class PlayerStats : MonoBehaviour
     public void ReceiveDamagePlayer(float damage)
     {
         _health -= damage;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+            Debug.Log("Player Hit");
     }
 }

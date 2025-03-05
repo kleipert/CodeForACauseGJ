@@ -13,12 +13,14 @@ namespace Player
         
         private InputSettingsInput _input;
         private float _activeCooldown;
+        private AudioSource _audioSource;
         
         
     
         void Start()
         {
             _input = GetComponent<InputSettingsInput>();
+            _audioSource = GetComponent<AudioSource>();
             _activeCooldown = 0f;
         }
 
@@ -32,6 +34,7 @@ namespace Player
             {
                 _activeCooldown = _baseCooldown;
                 SpawnBullets();
+                _audioSource.Play();
                 
             }
             _activeCooldown -= Time.deltaTime;
