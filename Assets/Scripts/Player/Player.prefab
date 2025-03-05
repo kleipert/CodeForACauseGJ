@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 2713151217697693914}
   - component: {fileID: 3799168596150510791}
   - component: {fileID: 438742378058350290}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   shot: 0
-  analogMovement: 0
+  analogMovement: 1
   cursorLocked: 1
   cursorInputForLook: 1
 --- !u!114 &2689782905568610676
@@ -112,10 +112,10 @@ MonoBehaviour:
   SprintSpeed: 30
   RotationSpeed: 1
   SpeedChangeRate: 0.7
-  BoostStrength: 1.1
+  BoostStrength: 100
   GravityBase: -15
   Gravity: -22
-  MovementAbility: 1
+  MovementAbility: 2
   JetpackStorage: 100
   JetpackLoss: 75
   DashSpeed: 5
@@ -380,7 +380,7 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 6569744917577210255, guid: d7a7d44aebe8f7d4d91b3ab579da4ad4, type: 3}
   _projectileTarget: {fileID: 6820267105382098084}
   _baseCooldown: 1
-  _bulletsPerShot: 6
+  _bulletsPerShot: 10
 --- !u!1 &3929514584002017280
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 124672494653037098}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: CameraTarget
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 3318436948832815126}
   - component: {fileID: 3916982259130722303}
   - component: {fileID: 6309607495466647242}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5141177091207449793}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 3084496530967922364}
   - component: {fileID: 2579524020419191131}
   - component: {fileID: 2742779702990232707}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: cm_cam
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ Transform:
   m_GameObject: {fileID: 8349080994754459890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2806, y: -0.1762, z: 1.1754}
+  m_LocalPosition: {x: 0, y: -0.299, z: 0.241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

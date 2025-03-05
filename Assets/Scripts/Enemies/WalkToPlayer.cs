@@ -5,7 +5,7 @@ namespace Enemies
 {
     public class WalkToPlayer : MonoBehaviour
     {
-        [SerializeField] private GameObject _player;
+        private GameObject _player;
         private NavMeshAgent _navAgent;
         public static bool FollowPlayer = true;
     
@@ -13,6 +13,7 @@ namespace Enemies
         void Start()
         {
             _navAgent = GetComponent<NavMeshAgent>();
+            _player = GameObject.Find("Player");
         }
 
         // Update is called once per frame
