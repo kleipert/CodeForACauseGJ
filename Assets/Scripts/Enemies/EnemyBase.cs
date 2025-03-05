@@ -29,7 +29,7 @@ namespace Enemies
             if (collision.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
             {
                 PerformMeleeAttack();
-                _playerStats.ReceiveDamage(damage);
+                _playerStats.ReceiveDamagePlayer(damage);
             }
         }
 

@@ -34,6 +34,8 @@ namespace Managers
         }
 
         public Transform GetPlayerTransform() => _player.transform;
+        
+        public float GetPlayerVelocity() => _player.GetComponent<PlayerStats>().GetPlayerVelocity();
 
     }
 }

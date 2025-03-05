@@ -27,12 +27,12 @@ public class PlayerStats : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    float GetPlayerVelocity()
+    public float GetPlayerVelocity()
     {
         return _playerVelocity;
     }
 
-    public void ReceiveDamage(float damage)
+    public void ReceiveDamagePlayer(float damage)
     {
         _health -= damage;
     }
