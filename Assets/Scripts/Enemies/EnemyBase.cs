@@ -7,12 +7,15 @@ namespace Enemies
     {
 
         [SerializeField] private EnemyType type;
+        [SerializeField] private float damage = 50f;
         private EnemyAnimations _animations;
+        private PlayerStats _playerStats;
         
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             _animations = GetComponent<EnemyAnimations>();
+            _playerStats = GetComponent<PlayerStats>();
         }
 
         // Update is called once per frame
@@ -26,7 +29,7 @@ namespace Enemies
             if (collision.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
             {
                 PerformMeleeAttack();
-                // Damage Player
+                _playerStats.ReceiveDamage(damage);
             }
         }
 
