@@ -38,9 +38,9 @@ public class PlayerStats : MonoBehaviour
         _health -= damage;
     }
 
-    private void OnCollisionEnter(Collision other)
+    /*private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Enemy"))
             Debug.Log("Player Hit");
-    }
+    }*/
 }

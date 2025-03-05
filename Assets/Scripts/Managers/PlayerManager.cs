@@ -37,6 +37,8 @@ namespace Managers
         
         public float GetPlayerVelocity() => _player.GetComponent<PlayerStats>().GetPlayerVelocity();
         
+        public void ReceiveDamagePlayer(float damage) => _player.GetComponent<PlayerStats>().ReceiveDamagePlayer(damage);
+        
         public Vector3 GetPlayerPosition()
         {
             return _player.transform.position;

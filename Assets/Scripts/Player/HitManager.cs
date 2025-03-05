@@ -1,5 +1,6 @@
 using System;
 using Enemies;
+using Managers;
 using UnityEngine;
 
 namespace Player
@@ -43,9 +44,12 @@ namespace Player
 
         private void OnCollisionEnter(Collision other)
         {
-            //other.gameObject.GetComponent<>();
-            Debug.Log("Player got hit!");
+            if (!other.gameObject.CompareTag("Enemy")) return;
+            if(other.gameObject.GetComponent<EnemyBase>().GetCanAttack())
+                PlayerManager.Instance.ReceiveDamagePlayer(50f);
+            //Debug.Log("Player got hit!");
         }
+                
     }
 
 }
