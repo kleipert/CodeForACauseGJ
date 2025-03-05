@@ -13,6 +13,7 @@ namespace Enemies
         void Start()
         {
             _animations = GetComponent<EnemyAnimations>();
+            
         }
 
         // Update is called once per frame

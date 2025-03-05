@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using Animator = UnityEngine.Animator;
 
 namespace Enemies
 {
@@ -22,7 +23,7 @@ namespace Enemies
         void Start()
         {
             _navAgent = GetComponent<NavMeshAgent>();
-            _anim = GetComponent<Animator>();
+            _anim = GetComponentInChildren<Animator>();
             _base = GetComponent<EnemyBase>();
             _type = _base.GetEnemyType();
             _hitAnimation = false;
