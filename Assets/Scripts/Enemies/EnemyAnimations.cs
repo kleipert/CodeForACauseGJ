@@ -1,7 +1,11 @@
 using System.Collections;
+using Managers;
+using Player;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Animator = UnityEngine.Animator;
+
 
 namespace Enemies
 {
@@ -14,9 +18,17 @@ namespace Enemies
         private EnemyBase _base;
         private Transform _hitzone;
         private NavMeshAgent _navAgent;
-        private float _baseDamageCooldown = 2f;
+        private WalkToPlayer _walkToPlayer;
+        private float _baseDamageCooldown = 5f;
         private float _currentDamageCooldown;
-        
+        private Vector3 _playerPosition;
+        private Rigidbody _rb;
+        private Vector3 _meleeVector;
+        [SerializeField] private float waitattack = 0.5f;
+        [SerializeField] private float attackpower = 5f;
+        [SerializeField] private float jumpheigth = 5f;
+
+
         
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +38,8 @@ namespace Enemies
             _anim = GetComponentInChildren<Animator>();
             _base = GetComponent<EnemyBase>();
             _type = _base.GetEnemyType();
+            _rb = GetComponent<Rigidbody>();
+            _walkToPlayer = GetComponent<WalkToPlayer>();
             _hitAnimation = false;
             _meleeAtkAnimation = false;
             _currentDamageCooldown = _baseDamageCooldown;
@@ -70,14 +84,14 @@ namespace Enemies
             {
                 if (_currentDamageCooldown <= 0)
                 {
-                    if(_navAgent.enabled)
-                        _navAgent.isStopped = true;
+                    //_walkToPlayer.FollowPlayer = false;
+                    if (_navAgent.enabled == true)
+                        _navAgent.enabled = false;
                     _anim.SetBool("CanHit", true);
-                    StartCoroutine(nameof(CheckMeleeRange));
+                    StartCoroutine(nameof(CheckMeleeRange)); 
                     StartCoroutine(nameof(WaitAndResetAnimations));
+                    StartCoroutine(nameof(StopAttack));
                     _currentDamageCooldown = _baseDamageCooldown;
-                    if(_navAgent.enabled)
-                        _navAgent.isStopped = false;
                 }
                 
             }
@@ -90,20 +104,53 @@ namespace Enemies
         
         private IEnumerator WaitAndResetAnimations()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(5f);
             ResetBools();
-            WalkToPlayer.FollowPlayer = true;
-            if(_navAgent.enabled)
-                _navAgent.isStopped = false;
+            _walkToPlayer.FollowPlayer = true;
+            
+            /*if(_navAgent.enabled)
+                _navAgent.isStopped = false;*/
+            if(_navAgent.enabled == false)
+                _navAgent.enabled = true;
+            _playerPosition = PlayerManager.Instance.GetPlayerPosition();
+            Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            _currentDamageCooldown = _baseDamageCooldown;
+            _base.IsAttacking = false;
         }
-        private IEnumerator CheckMeleeRange()
+        /*private IEnumerator CheckMeleeRange()
         {
             yield return new WaitForSeconds(0.5f);
             if (_hitzone.GetComponent<HitBox>().HasTarget() && _hitAnimation == false)
             {
                 Debug.Log("PLAYER GOT HIT");
             }
+        }*/
+
+        private IEnumerator CheckMeleeRange()
+        {
+            _playerPosition = PlayerManager.Instance.GetPlayerPosition();
+            _meleeVector = _playerPosition - transform.position;
+            Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            _meleeVector.y = 0;
+            _meleeVector = _meleeVector.normalized;
+            _meleeVector.y = jumpheigth;
+            
+            //_meleeVector = _meleeVector * -1;
+            //_rb.constraints = RigidbodyConstraints.FreezePosition;
+            yield return new WaitForSeconds(waitattack);
+            //_rb.AddForce(_meleeVector * attackpower, ForceMode.Impulse);
+            if (_navAgent.enabled == true)
+                _navAgent.enabled = false;
+            _rb.AddForce(_meleeVector * attackpower, ForceMode.Impulse);
         }
+
+        private IEnumerator StopAttack()
+        {
+            yield return new WaitForSeconds(waitattack); 
+            if(_rb.linearVelocity.magnitude >= 0.2f)
+                _rb.AddForce(_meleeVector * -0.5f, ForceMode.Impulse);
+        }
+        
         private void ResetBools()
         {
             _hitAnimation = false;

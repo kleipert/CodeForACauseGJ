@@ -1,4 +1,5 @@
 using Enemies;
+using Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -55,6 +56,7 @@ namespace Player
                     
                     other.GetComponent<EnemyKnockback>().GotHit(-other.transform.forward, _forceMultiplier);
                     other.GetComponent<EnemyAnimations>().PlayHitAnimation();
+                    other.GetComponent<EnemyStats>().ReceiveDamageEnemy(750);
                 }
             }
         }

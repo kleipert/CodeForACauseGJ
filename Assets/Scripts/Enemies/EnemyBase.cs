@@ -1,4 +1,5 @@
 using System;
+using Managers;
 using UnityEngine;
 
 namespace Enemies
@@ -7,7 +8,12 @@ namespace Enemies
     {
 
         [SerializeField] private EnemyType type;
+        [SerializeField] private float damage = 50f;
+        [SerializeField] private float setAttackCooldown = 5f;
+        [SerializeField] private bool canAttack;
         private EnemyAnimations _animations;
+        private float _attackCooldown;
+        public bool IsAttacking {get; set;} 
         
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -19,24 +25,43 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
-        
+            if (_attackCooldown > 0)
+            {
+                _attackCooldown -= Time.deltaTime;
+                canAttack = false;
+            }
+            else
+            {
+                canAttack = true;
+            }    
         }
 
-        private void OnCollisionEnter(Collision collision)
+        /*private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
+            if (other.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
             {
                 PerformMeleeAttack();
-                // Damage Player
+                _playerStats.ReceiveDamagePlayer(damage);
             }
-        }
+        }*/
 
-        private void PerformMeleeAttack()
+        public void PerformMeleeAttack()
         {
             _animations.PlayMeleeAttackAnimation();
+            IsAttacking = true;
         }
 
         public EnemyType GetEnemyType() => type;
+
+        public bool GetCanAttack()
+        {
+            if (canAttack && IsAttacking)
+            {
+                _attackCooldown = setAttackCooldown;
+                return canAttack;
+            }
+            return false;
+        }
     }
 
     public enum EnemyType: int
