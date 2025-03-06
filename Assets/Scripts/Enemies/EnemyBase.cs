@@ -68,6 +68,7 @@ namespace Enemies
     {
         ZombieMelee = 1,
         Dog = 2,
-        Other = 3
+        Ranged = 3,
+        Other = 4
     }
 }

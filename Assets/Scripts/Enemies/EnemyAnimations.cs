@@ -26,11 +26,14 @@ namespace Enemies
         private Vector3 _playerPosition;
         private Rigidbody _rb;
         private Vector3 _meleeVector;
+        private Vector3 _rangedVector;
         private bool _isattacking = false;
+        private int layerMask;
         [SerializeField] private float waitattack = 0.5f;
         [SerializeField] private float attackpower = 5f;
         [SerializeField] private float jumpheigth = 5f;
         [SerializeField] private float durationanimation = 0.8f;
+        [SerializeField] private GameObject _projectilePrefab;
 
 
 
@@ -48,6 +51,7 @@ namespace Enemies
             _hitAnimation = false;
             _meleeAtkAnimation = false;
             _currentDamageCooldown = _baseDamageCooldown;
+            layerMask = ~LayerMask.GetMask("Ranged");
 
             Transform[] children = gameObject.GetComponentsInChildren<Transform>();
             foreach (Transform child in children)
@@ -69,6 +73,9 @@ namespace Enemies
                     ZombieMeleeAnimations();
                     break;
                 case EnemyType.Dog:
+                    break;
+                case EnemyType.Ranged:
+                    RangedAttack();
                     break;
                 case EnemyType.Other:
                     break;
@@ -198,6 +205,19 @@ namespace Enemies
             if(_navAgent.enabled == true)
                 _navAgent.enabled = false;
             _anim.SetTrigger("IsDead");
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void RangedAttack()
+        {
+            if (_navAgent.enabled)
+                _navAgent.enabled = false;
+            _rangedVector = PlayerManager.Instance.GetPlayerPosition() - transform.position;
+            Physics.Raycast(transform.position, _rangedVector, out RaycastHit hit, Mathf.Infinity, layerMask);
+            if (hit.collider.gameObject.CompareTag("Player"))
+            {
+                Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+            }
         }
     }
 }
