@@ -128,10 +128,9 @@ namespace Enemies
                 _navAgent.isStopped = false;*/
             if(_navAgent.enabled == false)
                 _navAgent.enabled = true;
+            _rb.constraints = RigidbodyConstraints.FreezePosition;
             _playerPosition = PlayerManager.Instance.GetPlayerPosition();
             Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
-            _currentDamageCooldown = _baseDamageCooldown;
-            _base.IsAttacking = false;
         }
         /*private IEnumerator CheckMeleeRange()
         {
