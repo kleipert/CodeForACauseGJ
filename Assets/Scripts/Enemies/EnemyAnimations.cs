@@ -180,14 +180,18 @@ namespace Enemies
             ResetBools();
         }
         
-        private void ResetBools()
+        public void ResetBools()
         {
             _hitAnimation = false;
             _anim.SetBool("GotHit", false);
 
             _meleeAtkAnimation = false;
             _anim.SetBool("CanHit", false);
+            
+            _anim.SetBool("IsIdle", false);
         }
+        
+        public void SetIdleAnimation() => _anim.SetBool("IsIdle", true);
 
         public void DeathAnimation()
         {
