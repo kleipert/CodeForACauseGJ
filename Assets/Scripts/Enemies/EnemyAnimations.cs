@@ -11,22 +11,27 @@ namespace Enemies
 {
     public class EnemyAnimations : MonoBehaviour
     {
-        private EnemyType _type;
+        private static readonly int CanHit = Animator.StringToHash("CanHit");
+        private static readonly int GotHit = Animator.StringToHash("GotHit");
+        private EnemyType _type; 
         private bool _hitAnimation;
-        private bool _meleeAtkAnimation;
+        [SerializeField] private bool _meleeAtkAnimation;
         private Animator _anim;
         private EnemyBase _base;
         private Transform _hitzone;
         private NavMeshAgent _navAgent;
         private WalkToPlayer _walkToPlayer;
-        private float _baseDamageCooldown = 5f;
-        private float _currentDamageCooldown;
+        private float _baseDamageCooldown = 1.5f;
+        [SerializeField] private float _currentDamageCooldown;
         private Vector3 _playerPosition;
         private Rigidbody _rb;
         private Vector3 _meleeVector;
+        private bool _isattacking = false;
         [SerializeField] private float waitattack = 0.5f;
         [SerializeField] private float attackpower = 5f;
         [SerializeField] private float jumpheigth = 5f;
+        [SerializeField] private float durationanimation = 0.8f;
+
 
 
         
@@ -82,15 +87,17 @@ namespace Enemies
 
             if (_meleeAtkAnimation)
             {
-                if (_currentDamageCooldown <= 0)
+                if (_currentDamageCooldown <= 0 && !_isattacking)
                 {
                     //_walkToPlayer.FollowPlayer = false;
+                    _isattacking = true;
                     if (_navAgent.enabled == true)
                         _navAgent.enabled = false;
                     _anim.SetBool("CanHit", true);
                     StartCoroutine(nameof(CheckMeleeRange)); 
-                    StartCoroutine(nameof(WaitAndResetAnimations));
                     StartCoroutine(nameof(StopAttack));
+                    StartCoroutine(nameof(WaitAndResetAnimations));
+                    StartCoroutine(nameof(StopHitAnimation));
                     _currentDamageCooldown = _baseDamageCooldown;
                 }
                 
@@ -116,12 +123,12 @@ namespace Enemies
             Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
             _currentDamageCooldown = _baseDamageCooldown;
             _base.IsAttacking = false;
+            _isattacking = false;
         }
         
         private IEnumerator WaitAndResetAnimationsHit()
         {
             yield return new WaitForSeconds(1f);
-            ResetBools();
             _walkToPlayer.FollowPlayer = true;
             
             /*if(_navAgent.enabled)
@@ -131,6 +138,7 @@ namespace Enemies
             _rb.constraints = RigidbodyConstraints.FreezePosition;
             _playerPosition = PlayerManager.Instance.GetPlayerPosition();
             Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            ResetBools();
         }
         /*private IEnumerator CheckMeleeRange()
         {
@@ -165,6 +173,12 @@ namespace Enemies
             if(_rb.linearVelocity.magnitude >= 0.2f)
                 _rb.AddForce(_meleeVector * -0.5f, ForceMode.Impulse);
         }
+
+        private IEnumerator StopHitAnimation()
+        {
+            yield return new WaitForSeconds(durationanimation);
+            ResetBools();
+        }
         
         private void ResetBools()
         {
@@ -173,6 +187,13 @@ namespace Enemies
 
             _meleeAtkAnimation = false;
             _anim.SetBool("CanHit", false);
+        }
+
+        public void DeathAnimation()
+        {
+            if(_navAgent.enabled == true)
+                _navAgent.enabled = false;
+            _anim.SetTrigger("IsDead");
         }
     }
 }

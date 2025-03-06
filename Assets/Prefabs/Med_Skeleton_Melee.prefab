@@ -2072,6 +2072,7 @@ GameObject:
   - component: {fileID: 1439437781999162485}
   - component: {fileID: 7641875237651732889}
   - component: {fileID: 1331025841583659893}
+  - component: {fileID: 8716620003413944233}
   m_Layer: 0
   m_Name: Med_Skeleton_Melee
   m_TagString: Enemy
@@ -2087,7 +2088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8518445549792855156}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.69019854, z: -0, w: 0.7236201}
+  m_LocalRotation: {x: 0, y: -0.69020075, z: 0, w: 0.723618}
   m_LocalPosition: {x: -200.637, y: 0.189, z: -135.732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -2179,7 +2180,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8518445549792855156}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -334000983
   m_Radius: 0.5
   m_Speed: 10
   m_Acceleration: 10
@@ -2205,6 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f641aa69ae8a30d4a828fe0c2895cfb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FollowPlayer: 1
 --- !u!114 &1438374463779530191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,6 +2235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  damage: 50
+  setAttackCooldown: 5
+  canAttack: 0
 --- !u!114 &7641875237651732889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,6 +2250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45b4c3b179e9b44fa4d27a703660f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitattack: 0.3
+  attackpower: 20
+  jumpheigth: 0.2
 --- !u!114 &1331025841583659893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,6 +2270,19 @@ MonoBehaviour:
   - {fileID: 1688442839047127007}
   - {fileID: 4396945024621121778}
   - {fileID: 1177949284076999991}
+--- !u!114 &8716620003413944233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518445549792855156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77cc645b259340499c8f4113de1d6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 250
 --- !u!1 &8537141305480966125
 GameObject:
   m_ObjectHideFlags: 0

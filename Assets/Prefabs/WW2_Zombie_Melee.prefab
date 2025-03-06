@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 1781066350484868996}
   - component: {fileID: 220832959948585515}
   - component: {fileID: 5178411670804556114}
+  - component: {fileID: 3718788408986240011}
   m_Layer: 0
   m_Name: WW2_Zombie_Melee
   m_TagString: Enemy
@@ -225,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258429257803706431}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.69019854, z: -0, w: 0.7236201}
+  m_LocalRotation: {x: 0, y: -0.69020075, z: 0, w: 0.723618}
   m_LocalPosition: {x: -200.637, y: 0.189, z: -135.732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -320,7 +321,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258429257803706431}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 10
   m_Acceleration: 10
@@ -346,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f641aa69ae8a30d4a828fe0c2895cfb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  FollowPlayer: 1
 --- !u!114 &5679427447664270620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  damage: 50
+  setAttackCooldown: 5
+  canAttack: 0
 --- !u!114 &220832959948585515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +391,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45b4c3b179e9b44fa4d27a703660f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitattack: 0.3
+  attackpower: 20
+  jumpheigth: 0.2
 --- !u!114 &5178411670804556114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +414,19 @@ MonoBehaviour:
   - {fileID: 3436931770280435600}
   - {fileID: 3508391415157171071}
   - {fileID: 5995167634491367993}
+--- !u!114 &3718788408986240011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258429257803706431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77cc645b259340499c8f4113de1d6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 250
 --- !u!1 &1362865429351282618
 GameObject:
   m_ObjectHideFlags: 0
