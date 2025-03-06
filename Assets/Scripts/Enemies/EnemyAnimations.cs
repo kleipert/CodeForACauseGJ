@@ -77,7 +77,7 @@ namespace Enemies
             if (_hitAnimation)
             {
                 _anim.SetBool("GotHit", true);
-                StartCoroutine(nameof(WaitAndResetAnimations));
+                StartCoroutine(nameof(WaitAndResetAnimationsHit));
             }
 
             if (_meleeAtkAnimation)
@@ -105,6 +105,22 @@ namespace Enemies
         private IEnumerator WaitAndResetAnimations()
         {
             yield return new WaitForSeconds(5f);
+            ResetBools();
+            _walkToPlayer.FollowPlayer = true;
+            
+            /*if(_navAgent.enabled)
+                _navAgent.isStopped = false;*/
+            if(_navAgent.enabled == false)
+                _navAgent.enabled = true;
+            _playerPosition = PlayerManager.Instance.GetPlayerPosition();
+            Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            _currentDamageCooldown = _baseDamageCooldown;
+            _base.IsAttacking = false;
+        }
+        
+        private IEnumerator WaitAndResetAnimationsHit()
+        {
+            yield return new WaitForSeconds(1f);
             ResetBools();
             _walkToPlayer.FollowPlayer = true;
             
