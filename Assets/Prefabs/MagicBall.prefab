@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4410559630844028836}
   - component: {fileID: 7729150091287560695}
   - component: {fileID: 3519730430488692309}
+  - component: {fileID: 4971004020400799638}
   m_Layer: 0
   m_Name: MagicBall
   m_TagString: Untagged
@@ -102,9 +103,21 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4971004020400799638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877195540587857816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50b2198bcc74d849bc29ab7b5d62838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
