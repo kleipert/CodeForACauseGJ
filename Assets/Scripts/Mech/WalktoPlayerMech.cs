@@ -10,6 +10,7 @@ namespace Enemies
         private NavMeshAgent _navAgent;
         public bool FollowPlayer = false;
         private Animator _animator;
+        private Vector3 _startPosition;
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -18,12 +19,13 @@ namespace Enemies
             _player = GameObject.Find("Player");
             _animator = GetComponent<Animator>();
             _navAgent.SetDestination(transform.position);
+            _startPosition = transform.position;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (_navAgent.enabled && Vector3.Distance(_player.transform.position, transform.position) < 70f)
+            if (_navAgent.enabled && Vector3.Distance(_player.transform.position, transform.position) < 40f)
             {
                 FollowPlayer = true;
             }
