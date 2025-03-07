@@ -8,6 +8,7 @@ namespace Enemies
     {
         [SerializeField] private float _health = 250f;
         private EnemyAnimations _enemyAnimations;
+        private bool _isInvincible = false;
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -27,13 +28,21 @@ namespace Enemies
     
         public void ReceiveDamageEnemy(float damage)
         {
-            _health -= damage * PlayerManager.Instance.GetPlayerVelocity();
+            if (!_isInvincible)
+                _health -= damage * PlayerManager.Instance.GetPlayerVelocity();
         }
 
         IEnumerator DestroyObject()
         {
             yield return new WaitForSeconds(6f);
             Destroy(gameObject);
+        }
+        
+        public float GetHealth() => _health;
+
+        public void SetIsInvincible(bool isInvincible)
+        {
+            _isInvincible = isInvincible;
         }
     }
 }

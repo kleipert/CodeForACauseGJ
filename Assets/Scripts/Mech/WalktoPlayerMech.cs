@@ -1,3 +1,4 @@
+using Managers;
 using Unity.Mathematics.Geometry;
 using UnityEngine;
 using UnityEngine.AI;
@@ -25,13 +26,17 @@ namespace Enemies
         // Update is called once per frame
         void Update()
         {
-            if (_navAgent.enabled && Vector3.Distance(_player.transform.position, transform.position) < 40f)
+            if (_navAgent.enabled && PhasenManager.Instance.betweenPhase)
             {
-                FollowPlayer = true;
-            }
-            
-            if(FollowPlayer && _navAgent.enabled)
                 _navAgent.SetDestination(_player.transform.position);
+                _animator.SetBool("IsIdle", true);
+            }
+            else if (_navAgent.enabled && !PhasenManager.Instance.betweenPhase)
+            {
+                _navAgent.SetDestination(transform.position);
+                _animator.SetBool("IsIdle", false);
+            }
+                
         }
     }
 }
