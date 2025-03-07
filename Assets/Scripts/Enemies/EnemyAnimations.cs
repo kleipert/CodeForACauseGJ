@@ -25,6 +25,7 @@ namespace Enemies
         private Transform _hitzone;
         private NavMeshAgent _navAgent;
         private WalkToPlayer _walkToPlayer;
+        private WalkToPlayerRanged _walkToPlayerRanged;
         [SerializeField] private float _baseDamageCooldown = 1.5f;
         [SerializeField] private float _currentDamageCooldown;
         private Vector3 _playerPosition;
@@ -49,6 +50,7 @@ namespace Enemies
             _type = _base.GetEnemyType();
             _rb = GetComponent<Rigidbody>();
             _walkToPlayer = GetComponent<WalkToPlayer>();
+            _walkToPlayerRanged = GetComponent<WalkToPlayerRanged>();
             _hitAnimation = false;
             _meleeAtkAnimation = false;
             _rangedAttackAnimation = false;
@@ -116,13 +118,27 @@ namespace Enemies
         public void PlayHitAnimation() => _hitAnimation = true;
         public void PlayMeleeAttackAnimation() => _meleeAtkAnimation = true;
         public void PlayRangedAttackAnimation() => _rangedAttackAnimation = true;
-        
+
+
+        private void SetWalkToPlayer(bool value)
+        {
+            switch (_type)
+            {
+                case EnemyType.ZombieMelee:
+                    _walkToPlayer.FollowPlayer = value;
+                    break;
+                case EnemyType.Ranged:
+                    _walkToPlayerRanged.FollowPlayer = value;
+                    break;
+                
+            }
+        }
         
         private IEnumerator WaitAndResetAnimations()
         {
             yield return new WaitForSeconds(5f);
             ResetBools();
-            _walkToPlayer.FollowPlayer = true;
+            SetWalkToPlayer(true);
             
             /*if(_navAgent.enabled)
                 _navAgent.isStopped = false;*/
@@ -138,7 +154,7 @@ namespace Enemies
         private IEnumerator WaitAndResetAnimationsHit()
         {
             yield return new WaitForSeconds(1f);
-            _walkToPlayer.FollowPlayer = true;
+            SetWalkToPlayer(true);
             
             /*if(_navAgent.enabled)
                 _navAgent.isStopped = false;*/

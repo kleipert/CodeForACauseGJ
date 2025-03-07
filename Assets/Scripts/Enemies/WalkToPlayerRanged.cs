@@ -49,6 +49,7 @@ namespace Enemies
                 else if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) > 40f)
                 {
                     _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
+                    _enemyAnimations.PlayRangedAttackAnimation();
                     _enemyAnimations.ResetBools();
                 }
                 else
