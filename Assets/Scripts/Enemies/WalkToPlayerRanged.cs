@@ -22,7 +22,7 @@ namespace Enemies
             _navAgent = GetComponent<NavMeshAgent>();
             _player = GameObject.Find("Player");
             _enemyAnimations = GetComponent<EnemyAnimations>();
-            _enemyAnimations.SetIdleAnimation();
+            //_enemyAnimations.SetIdleAnimation();
 
         }
 
@@ -38,6 +38,7 @@ namespace Enemies
                     if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity) && hit.collider.CompareTag("Player"))
                     {
                         _navAgent.SetDestination(transform.position);
+                        _enemyAnimations.ResetBools();
                     }
                     else
                     {
@@ -48,7 +49,7 @@ namespace Enemies
                 else if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) > 40f)
                 {
                     _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
-                    //_enemyAnimation.SetReadyforAttack();
+                    _enemyAnimations.ResetBools();
                 }
                 else
                 {

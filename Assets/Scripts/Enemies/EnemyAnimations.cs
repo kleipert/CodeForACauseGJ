@@ -18,6 +18,7 @@ namespace Enemies
         private static readonly int GotHit = Animator.StringToHash("GotHit");
         private EnemyType _type; 
         private bool _hitAnimation;
+        private bool _rangedAttackAnimation;
         [SerializeField] private bool _meleeAtkAnimation;
         private Animator _anim;
         private EnemyBase _base;
@@ -39,10 +40,6 @@ namespace Enemies
         [SerializeField] private float durationanimation = 0.8f;
         [SerializeField] private GameObject _projectilePrefab;
 
-
-
-        
-
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -54,6 +51,7 @@ namespace Enemies
             _walkToPlayer = GetComponent<WalkToPlayer>();
             _hitAnimation = false;
             _meleeAtkAnimation = false;
+            _rangedAttackAnimation = false;
             _currentDamageCooldown = _baseDamageCooldown;
 
             Transform[] children = gameObject.GetComponentsInChildren<Transform>();
@@ -117,6 +115,7 @@ namespace Enemies
         
         public void PlayHitAnimation() => _hitAnimation = true;
         public void PlayMeleeAttackAnimation() => _meleeAtkAnimation = true;
+        public void PlayRangedAttackAnimation() => _rangedAttackAnimation = true;
         
         
         private IEnumerator WaitAndResetAnimations()
@@ -213,21 +212,31 @@ namespace Enemies
         // ReSharper disable Unity.PerformanceAnalysis
         private void RangedAttack()
         {
-            if (_currentDamageCooldown <= 0)
+            if (_hitAnimation)
             {
-                RaycastHit hit;
-                _rangedVector = PlayerManager.Instance.GetPlayerPosition()-transform.position;
-                if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity))
+                _anim.SetBool("GotHit", true);
+                StartCoroutine(nameof(WaitAndResetAnimationsHit));
+            }
+
+            if (_rangedAttackAnimation)
+            {
+                if (_currentDamageCooldown <= 0)
                 {
-                    if (hit.collider != null && hit.collider.CompareTag("Player"))
+                    RaycastHit hit;
+                    _rangedVector = PlayerManager.Instance.GetPlayerPosition()-transform.position;
+                    if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity))
                     {
-                        if (_navAgent.enabled)
-                            _navAgent.enabled = false;
-                        transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
-                        Instantiate(_projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
-                        _currentDamageCooldown = _baseDamageCooldown; 
-                        if (!_navAgent.enabled)
-                            _navAgent.enabled = true;
+                        if (hit.collider != null && hit.collider.CompareTag("Player"))
+                        {
+                            _anim.SetBool("CanHit", true);
+                            if (_navAgent.enabled)
+                                _navAgent.enabled = false;
+                            transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
+                            Instantiate(_projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
+                            _currentDamageCooldown = _baseDamageCooldown; 
+                            if (!_navAgent.enabled)
+                                _navAgent.enabled = true;
+                        }
                     }
                 }
             }
