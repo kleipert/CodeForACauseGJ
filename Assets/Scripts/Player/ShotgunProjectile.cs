@@ -12,6 +12,8 @@ namespace Player
         [SerializeField] private float _bulletSpeed = 5f;
         [SerializeField] private float _maxLifetime = 5f;
         [SerializeField] private float _forceMultiplier = 1f;
+        [SerializeField] private float _projectileDamage = 5f;
+
         private float _remainingLifetime;
         
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,7 +33,7 @@ namespace Player
         void Update()
         {
             transform.position += transform.forward * (Time.deltaTime * _bulletSpeed);
-            Debug.DrawRay(transform.position, transform.forward, Color.red, 120);
+            //Debug.DrawRay(transform.position, transform.forward, Color.red, 120);
             _remainingLifetime -= Time.deltaTime;
             if (_remainingLifetime <= 0)
             {
@@ -56,7 +58,7 @@ namespace Player
                     
                     other.GetComponent<EnemyKnockback>().GotHit(-other.transform.forward, _forceMultiplier);
                     other.GetComponent<EnemyAnimations>().PlayHitAnimation();
-                    other.GetComponent<EnemyStats>().ReceiveDamageEnemy(750);
+                    other.GetComponent<EnemyStats>().ReceiveDamageEnemy(_projectileDamage);
                 }
             }
         }

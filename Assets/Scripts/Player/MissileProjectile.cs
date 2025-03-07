@@ -17,6 +17,7 @@ namespace Player
         [SerializeField] private float _explosionForceEnemy = 2f;
         [SerializeField] private Transform _explosionPoint;
         [SerializeField] private float _projectileLifetime = 3f;
+        [SerializeField] private float _missleDamage = 10f;
         private float _currentProjectileLifetime;
         private Vector3 _target;
         private bool _isFired;
@@ -80,6 +81,7 @@ namespace Player
                         if (dir.y <= 0)
                             dir.y = 0;
                         coll.GetComponent<EnemyKnockback>().GotHit(dir, _explosionForceEnemy);
+                        coll.GetComponent<EnemyStats>().ReceiveDamageEnemy(_missleDamage);
                     }
                 }
             }
