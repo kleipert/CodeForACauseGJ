@@ -19,7 +19,6 @@ namespace Enemies
         void Start()
         {
             _animations = GetComponent<EnemyAnimations>();
-            
         }
 
         // Update is called once per frame
@@ -36,14 +35,13 @@ namespace Enemies
             }    
         }
 
-        /*private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player") && type == EnemyType.ZombieMelee)
             {
                 PerformMeleeAttack();
-                _playerStats.ReceiveDamagePlayer(damage);
             }
-        }*/
+        }
 
         public void PerformMeleeAttack()
         {

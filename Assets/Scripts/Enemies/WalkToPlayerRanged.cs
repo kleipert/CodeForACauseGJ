@@ -1,3 +1,5 @@
+using Managers;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,6 +12,9 @@ namespace Enemies
         private NavMeshAgent _navAgent;
         public bool FollowPlayer = true;
         private EnemyAnimations _enemyAnimations;
+        private Vector3 _rangedVector;
+        private int layerMask;
+
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -18,6 +23,7 @@ namespace Enemies
             _player = GameObject.Find("Player");
             _enemyAnimations = GetComponent<EnemyAnimations>();
             _enemyAnimations.SetIdleAnimation();
+
         }
 
         // Update is called once per frame
@@ -27,12 +33,21 @@ namespace Enemies
             {
                 if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) < 40f)
                 {
-                    _navAgent.SetDestination(_player.transform.position);
-                    _enemyAnimations.ResetBools();
+                    _rangedVector = PlayerManager.Instance.GetPlayerPosition() - transform.position;
+                    RaycastHit hit;
+                    if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity) && hit.collider.CompareTag("Player"))
+                    {
+                        _navAgent.SetDestination(transform.position);
+                    }
+                    else
+                    {
+                        _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
+                    }
+                    
                 }
                 else if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) > 40f)
                 {
-                    _navAgent.SetDestination(transform.position);
+                    _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
                     //_enemyAnimation.SetReadyforAttack();
                 }
                 else

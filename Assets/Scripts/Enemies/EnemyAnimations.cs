@@ -1,10 +1,13 @@
 using System.Collections;
+using System.Numerics;
 using Managers;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Animator = UnityEngine.Animator;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 
 namespace Enemies
@@ -21,14 +24,15 @@ namespace Enemies
         private Transform _hitzone;
         private NavMeshAgent _navAgent;
         private WalkToPlayer _walkToPlayer;
-        private float _baseDamageCooldown = 1.5f;
+        [SerializeField] private float _baseDamageCooldown = 1.5f;
         [SerializeField] private float _currentDamageCooldown;
         private Vector3 _playerPosition;
         private Rigidbody _rb;
         private Vector3 _meleeVector;
         private Vector3 _rangedVector;
         private bool _isattacking = false;
-        private int layerMask;
+        [SerializeField] private LayerMask layerMask;
+        private Vector3 newDirection;
         [SerializeField] private float waitattack = 0.5f;
         [SerializeField] private float attackpower = 5f;
         [SerializeField] private float jumpheigth = 5f;
@@ -51,7 +55,6 @@ namespace Enemies
             _hitAnimation = false;
             _meleeAtkAnimation = false;
             _currentDamageCooldown = _baseDamageCooldown;
-            layerMask = ~LayerMask.GetMask("Ranged");
 
             Transform[] children = gameObject.GetComponentsInChildren<Transform>();
             foreach (Transform child in children)
@@ -144,7 +147,7 @@ namespace Enemies
                 _navAgent.enabled = true;
             _rb.constraints = RigidbodyConstraints.FreezePosition;
             _playerPosition = PlayerManager.Instance.GetPlayerPosition();
-            Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
             ResetBools();
         }
         /*private IEnumerator CheckMeleeRange()
@@ -160,7 +163,7 @@ namespace Enemies
         {
             _playerPosition = PlayerManager.Instance.GetPlayerPosition();
             _meleeVector = _playerPosition - transform.position;
-            Vector3.RotateTowards(transform.forward, _meleeVector, 360f, 0.0f);
+            transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
             _meleeVector.y = 0;
             _meleeVector = _meleeVector.normalized;
             _meleeVector.y = jumpheigth;
@@ -210,13 +213,23 @@ namespace Enemies
         // ReSharper disable Unity.PerformanceAnalysis
         private void RangedAttack()
         {
-            if (_navAgent.enabled)
-                _navAgent.enabled = false;
-            _rangedVector = PlayerManager.Instance.GetPlayerPosition() - transform.position;
-            Physics.Raycast(transform.position, _rangedVector, out RaycastHit hit, Mathf.Infinity, layerMask);
-            if (hit.collider.gameObject.CompareTag("Player"))
+            if (_currentDamageCooldown <= 0)
             {
-                Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+                RaycastHit hit;
+                _rangedVector = PlayerManager.Instance.GetPlayerPosition()-transform.position;
+                if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider != null && hit.collider.CompareTag("Player"))
+                    {
+                        if (_navAgent.enabled)
+                            _navAgent.enabled = false;
+                        transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
+                        Instantiate(_projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
+                        _currentDamageCooldown = _baseDamageCooldown; 
+                        if (!_navAgent.enabled)
+                            _navAgent.enabled = true;
+                    }
+                }
             }
         }
     }
