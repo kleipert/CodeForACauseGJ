@@ -218,8 +218,8 @@ namespace Enemies
                 StartCoroutine(nameof(WaitAndResetAnimationsHit));
             }
 
-            if (_rangedAttackAnimation)
-            {
+            //if (_rangedAttackAnimation)
+            //{
                 if (_currentDamageCooldown <= 0)
                 {
                     RaycastHit hit;
@@ -239,7 +239,7 @@ namespace Enemies
                         }
                     }
                 }
-            }
+            //}
         }
     }
 }
