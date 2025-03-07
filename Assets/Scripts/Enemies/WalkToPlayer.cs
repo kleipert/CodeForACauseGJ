@@ -17,7 +17,7 @@ namespace Enemies
             _navAgent = GetComponent<NavMeshAgent>();
             _player = GameObject.Find("Player");
             _enemyAnimations = GetComponent<EnemyAnimations>();
-            _enemyAnimations.SetIdleAnimation();
+            //_enemyAnimations.SetIdleAnimation();
         }
 
         // Update is called once per frame

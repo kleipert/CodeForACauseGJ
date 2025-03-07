@@ -1,10 +1,13 @@
 using System.Collections;
+using System.Numerics;
 using Managers;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Animator = UnityEngine.Animator;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 
 namespace Enemies
@@ -28,7 +31,7 @@ namespace Enemies
         private Vector3 _meleeVector;
         private Vector3 _rangedVector;
         private bool _isattacking = false;
-        private int layerMask;
+        [SerializeField] private LayerMask layerMask;
         private Vector3 newDirection;
         [SerializeField] private float waitattack = 0.5f;
         [SerializeField] private float attackpower = 5f;
@@ -52,7 +55,6 @@ namespace Enemies
             _hitAnimation = false;
             _meleeAtkAnimation = false;
             _currentDamageCooldown = _baseDamageCooldown;
-            layerMask = ~LayerMask.GetMask("Ranged");
 
             Transform[] children = gameObject.GetComponentsInChildren<Transform>();
             foreach (Transform child in children)
@@ -213,18 +215,22 @@ namespace Enemies
         {
             if (_currentDamageCooldown <= 0)
             {
-                if (_navAgent.enabled)
-                    _navAgent.enabled = false;
-                transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
-                _rangedVector = PlayerManager.Instance.GetPlayerPosition() - transform.position;
-                Physics.Raycast(transform.position, _rangedVector, out RaycastHit hit, Mathf.Infinity, layerMask);
-                if (hit.collider != null)
+                RaycastHit hit;
+                _rangedVector = PlayerManager.Instance.GetPlayerPosition()-transform.position;
+                if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity))
                 {
+                    if (hit.collider != null && hit.collider.CompareTag("Player"))
+                    {
+                        if (_navAgent.enabled)
+                            _navAgent.enabled = false;
+                        transform.LookAt(PlayerManager.Instance.GetPlayerPosition());
                         Instantiate(_projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
+                        _currentDamageCooldown = _baseDamageCooldown; 
+                        if (!_navAgent.enabled)
+                            _navAgent.enabled = true;
+                    }
                 }
-                _currentDamageCooldown = _baseDamageCooldown;
             }
-            
         }
     }
 }

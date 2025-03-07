@@ -23,7 +23,6 @@ namespace Enemies
             _player = GameObject.Find("Player");
             _enemyAnimations = GetComponent<EnemyAnimations>();
             _enemyAnimations.SetIdleAnimation();
-            layerMask = ~LayerMask.GetMask("Ranged");
 
         }
 
@@ -35,19 +34,20 @@ namespace Enemies
                 if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) < 40f)
                 {
                     _rangedVector = PlayerManager.Instance.GetPlayerPosition() - transform.position;
-                    if(Physics.Raycast(transform.position, _rangedVector, out RaycastHit hit, Mathf.Infinity, layerMask))
+                    RaycastHit hit;
+                    if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity) && hit.collider.CompareTag("Player"))
                     {
                         _navAgent.SetDestination(transform.position);
                     }
                     else
                     {
-                        _navAgent.SetDestination(transform.position);
+                        _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
                     }
                     
                 }
                 else if (FollowPlayer && Vector3.Distance(_player.transform.position, transform.position) > 40f)
                 {
-                    _navAgent.SetDestination(transform.position);
+                    _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
                     //_enemyAnimation.SetReadyforAttack();
                 }
                 else
