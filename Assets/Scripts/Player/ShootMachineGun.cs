@@ -1,16 +1,20 @@
+using System.Collections;
+using Enemies;
 using InputSystem;
 using Managers;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Player
 {
     public class ShootMachineGun : MonoBehaviour
     {
         // Machine Gun variables
-        [SerializeField] private Transform _projectileTarget;
-        [SerializeField] private float _baseCooldown = 0.2f;
+        [SerializeField] private float _baseCooldown = 0.1f;
+        [SerializeField] private float _bulletDamage = 2f;
+        [SerializeField] private GameObject _shotVFX;
+        private ParticleSystem _laserVFX;
         private float _activeCooldown;
+
 
         private InputSettingsInput _input;
         private GameObject _mainCamera;
@@ -22,7 +26,9 @@ namespace Player
         {
             _input = GetComponent<InputSettingsInput>();
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+            _laserVFX = _shotVFX.GetComponent<ParticleSystem>();
             _activeCooldown = 0f;
+            StopLaserBeam();
         }
 
         // Update is called once per frame
@@ -30,23 +36,43 @@ namespace Player
         {
             if (PlayerManager.Instance.GetCurrentMovementType() == MovementType.Grapple)
             {
-                if (_input.shot && _activeCooldown <= 0f)
+                if (_input.shot)
                 {
-                    _activeCooldown = _baseCooldown;
-                    RaycastHit rc_hit;
-                    if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit))
+                    _shotVFX.transform.forward = _mainCamera.transform.forward;
+                    ActivateLaserBeam();
+                    if (_activeCooldown <= 0f)
                     {
-                        // Shoot VFX from projectile target
-                        // Impact VFX
-                        // Damage player
-                        if (rc_hit.transform.CompareTag("Enemy"))
+                        _activeCooldown = _baseCooldown;
+                        RaycastHit rc_hit;
+                        if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit))
                         {
-                            // Do damage
+                        
+                            if (rc_hit.transform.CompareTag("Enemy"))
+                            {
+                                rc_hit.transform.GetComponent<EnemyStats>().ReceiveDamageEnemy(_bulletDamage);
+                            }
                         }
                     }
                 }
+                else
+                    StopLaserBeam();
+                
                 _activeCooldown -= Time.deltaTime;
             }
+        }
+        
+        private void ActivateLaserBeam()
+        {
+            _shotVFX.SetActive(true);
+            if(!_laserVFX.isPlaying)
+                _laserVFX.Play();
+        }
+        
+        private void StopLaserBeam()
+        {
+            if(_laserVFX.isPlaying)
+                _laserVFX.Stop();
+            _shotVFX.SetActive(false);
         }
     }
 }
