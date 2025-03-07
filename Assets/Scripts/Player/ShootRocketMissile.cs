@@ -15,6 +15,7 @@ namespace Player
         private bool _isLoaded;
         private GameObject _loadedProjectile;
         private float _activeCooldown;
+        private LayerMask _player;
         
         
     
@@ -24,6 +25,7 @@ namespace Player
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             _activeCooldown = 0f;
             _isLoaded = false;
+            _player = LayerMask.GetMask("Player");
         }
 
         // Update is called once per frame
@@ -37,7 +39,7 @@ namespace Player
                 _activeCooldown = _baseCooldown;
                 _isLoaded = false;
                 RaycastHit rc_hit;
-                if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit))
+                if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit, Mathf.Infinity, ~_player.value))
                 {
                     //Debug.DrawLine(_mainCamera.transform.position, rc_hit.point, Color.magenta, 120);
                     _loadedProjectile.transform.SetParent(null);

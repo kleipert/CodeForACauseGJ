@@ -1,6 +1,7 @@
 using System;
 using Enemies;
 using Managers;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -51,6 +52,11 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                return;
+            }
+            
             if (!other.gameObject.CompareTag("Player"))
             {
                 Transform _finalTransform = _explosionPoint;
