@@ -1,4 +1,5 @@
 using InputSystem;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -61,6 +62,7 @@ namespace Player
 		public LayerMask GroundLayers;
 		[Tooltip("What layers the character uses to grapple")]
 		public LayerMask GrappleLayers;
+		public LayerMask ArmorLayers;
 		[Tooltip("Is the player currently grappling")]
 		public bool IsGrappling;
 		[FormerlySerializedAs("GrappleTarget")] [Tooltip("GrappleTarget")]
