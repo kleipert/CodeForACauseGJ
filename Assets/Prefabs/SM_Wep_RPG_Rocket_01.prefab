@@ -142,6 +142,7 @@ MonoBehaviour:
   _explosionForceEnemy: 10
   _explosionPoint: {fileID: 519944310247152501}
   _projectileLifetime: 3
+  _missleDamage: 200
 --- !u!65 &5902379424928591297
 BoxCollider:
   m_ObjectHideFlags: 0
