@@ -1,3 +1,4 @@
+using System.Collections;
 using Enemies;
 using Managers;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace Player
         private Vector3 _target;
         private bool _isFired;
         private BoxCollider _collider;
+        private AudioSource _audioSource;
 
 
         public void SetTarget(Vector3 target) => _target = target;
@@ -31,6 +33,7 @@ namespace Player
             _collider = GetComponent<BoxCollider>();
             _collider.enabled = false;
             _currentProjectileLifetime = _projectileLifetime;
+            _audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -42,9 +45,13 @@ namespace Player
                 transform.position = Vector3.MoveTowards(transform.position,
                     _target, _speed * Time.deltaTime);
                 _currentProjectileLifetime -= Time.deltaTime;
-                
-                if(_currentProjectileLifetime <= 0)
-                    Destroy(gameObject);
+
+                if (_currentProjectileLifetime <= 0)
+                {
+                    _audioSource.Play();
+                    StartCoroutine(nameof(WaitAudio));
+                }
+                    
             }
         }
 
@@ -58,7 +65,8 @@ namespace Player
             if (!other.gameObject.CompareTag("Player"))
             {
                 Transform _finalTransform = _explosionPoint;
-                Destroy(gameObject);
+                _audioSource.Play();
+                StartCoroutine(nameof(WaitAudio));
                 Collider[] colliders = Physics.OverlapSphere(_finalTransform.position, _explosionRadius);
                 // Trigger VFX + Sound?
                 foreach (Collider coll in colliders)
@@ -88,5 +96,14 @@ namespace Player
         {
             //Gizmos.DrawSphere(transform.position, _explosionRadius);
         }
+
+        IEnumerator WaitAudio()
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            //GetComponent<BoxCollider>().enabled = false;
+            yield return new WaitForSeconds(2f);
+            Destroy(gameObject);
+        }
     }
+    
 }
