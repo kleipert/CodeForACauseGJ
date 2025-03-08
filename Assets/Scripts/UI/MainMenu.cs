@@ -13,8 +13,7 @@ namespace UI
         
         public void ExitGame()
         {
-            SceneManager.LoadScene("Medieval");
-
+            Application.Quit();
         }
     }
 }

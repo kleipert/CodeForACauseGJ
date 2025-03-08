@@ -3,6 +3,7 @@ using Enemies;
 using UnityEngine;
 using Managers;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace Mech
 {
@@ -83,6 +84,7 @@ namespace Mech
         {
             yield return new WaitForSeconds(deathTime);
             Destroy(gameObject);
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }
