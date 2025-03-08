@@ -1,9 +1,6 @@
-using System;
 using Enemies;
 using Managers;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Player
 {
