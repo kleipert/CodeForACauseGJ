@@ -231,7 +231,7 @@ namespace Player
 			{
 				_controller.Move(GrappleDirection.normalized * (Time.deltaTime * SprintSpeed));
 				_input.move = Vector2.zero;
-				if ((GrapplePosition - transform.position).magnitude <= 2)
+				if ((GrapplePosition - transform.position).magnitude <= 3)
 				{
 					IsGrappling = false;
 					_lr.enabled = false;
@@ -247,14 +247,14 @@ namespace Player
 				if (Physics.Raycast(_mainCamera.transform.position, _mainCamera.transform.forward, out rc_hit, 50,
 					    GrappleLayers))
 				{
-					IsGrappling = true;
-					_lr.positionCount = 2;
 					
+					_lr.positionCount = 2;
 					GrapplePosition = rc_hit.point;
 					_lr.SetPosition(0, transform.position);
 					_lr.SetPosition(1, GrapplePosition);
 					_lr.enabled = true;
 					GrappleDirection = rc_hit.point - transform.position;
+					IsGrappling = true;
 				}
 			}
 			else
