@@ -38,11 +38,11 @@ namespace Enemies
                     if(Physics.Raycast(transform.position, _rangedVector, out hit, Mathf.Infinity) && hit.collider.CompareTag("Player"))
                     {
                         _navAgent.SetDestination(transform.position);
-                        _enemyAnimations.ResetBools();
                     }
                     else
                     {
                         _navAgent.SetDestination(PlayerManager.Instance.GetPlayerPosition());
+                        _enemyAnimations.ResetBools();
                     }
                     
                 }
