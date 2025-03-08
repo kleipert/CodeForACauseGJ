@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Managers;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Enemy
+namespace Mech
 {
     public class AttackPlayer : MonoBehaviour
     {   

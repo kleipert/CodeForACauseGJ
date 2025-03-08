@@ -1,9 +1,8 @@
 using Managers;
-using Unity.Mathematics.Geometry;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Enemies
+namespace Mech
 {
     public class WalkToPlayerMech : MonoBehaviour
     {

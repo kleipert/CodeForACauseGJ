@@ -1,7 +1,6 @@
 using InputSystem;
 using Managers;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace Player
 {

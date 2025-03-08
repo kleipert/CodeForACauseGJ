@@ -1,27 +1,13 @@
-using System;
 using Enemies;
-using Managers;
 using UnityEngine;
 
-namespace Player
+namespace Managers
 {
     public class HitManager : MonoBehaviour
     {
         private SphereCollider _sphereCollider;
         private EnemyType _type;
-        
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-            
-        }
-    
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-        
+
         private void OnTriggerStay(Collider other)
         {
             if (other.gameObject.CompareTag("Enemy"))
