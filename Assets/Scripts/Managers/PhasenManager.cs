@@ -50,7 +50,7 @@ namespace Managers
                 betweenPhase = false;
             }
 
-            if (!crystal1)
+            if (!crystal1 && !endPhase2)
             {
                 player.transform.position = startBossFight.transform.position;
                 phase2.SetActive(false);
@@ -59,7 +59,7 @@ namespace Managers
                 betweenPhase = false;
             }
 
-            if (!crystal2)
+            if (!crystal2 && !endPhase3)
             {
                 player.transform.position = startBossFight.transform.position;
                 phase3.SetActive(false);

@@ -1,3 +1,4 @@
+using System.Collections;
 using Enemies;
 using UnityEngine;
 using Managers;
@@ -11,6 +12,7 @@ namespace Mech
         private EnemyStats stats;
         private NavMeshAgent navMeshAgent;
         [SerializeField] private GameObject shield;
+        [SerializeField] private float deathTime;
         public bool parkourPhase { get; set; }
         private bool startPhase2 = false;
         private bool startPhase3 = false;
@@ -37,6 +39,7 @@ namespace Mech
                 shield.SetActive(true);
                 stats.SetIsInvincible(true);
                 startPhase2 = true;
+                PhasenManager.Instance.StartPhase2();
             }
             
             if (stats.GetHealth() <= 5000 && !startPhase3)
@@ -48,6 +51,13 @@ namespace Mech
                 shield.SetActive(true);
                 stats.SetIsInvincible(true);
                 startPhase3 = true;
+                PhasenManager.Instance.StartPhase3();
+            }
+
+            if (stats.GetHealth() <= 0)
+            {
+                animator.SetTrigger("IsDead");
+                StartCoroutine(nameof(DestroyBoss));
             }
         }
 
@@ -58,7 +68,6 @@ namespace Mech
             animator.SetBool("IsIdle", false);
             shield.SetActive(false);
             stats.SetIsInvincible(false);
-            startPhase2 = false;
         }
 
         public void EndPhase3()
@@ -68,7 +77,12 @@ namespace Mech
             animator.SetBool("IsIdle", false);
             shield.SetActive(false);
             stats.SetIsInvincible(false);
-            startPhase2 = false;
+        }
+
+        IEnumerator DestroyBoss()
+        {
+            yield return new WaitForSeconds(deathTime);
+            Destroy(gameObject);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Enemies
 {
     public class WalkToPlayerMech : MonoBehaviour
     {
-        private GameObject _player;
+        [SerializeField] private GameObject _player;
         private NavMeshAgent _navAgent;
         public bool FollowPlayer = false;
         private Animator _animator;
@@ -17,7 +17,6 @@ namespace Enemies
         void Start()
         {
             _navAgent = GetComponent<NavMeshAgent>();
-            _player = GameObject.Find("Player");
             _animator = GetComponent<Animator>();
             _navAgent.SetDestination(transform.position);
             _startPosition = transform.position;
@@ -28,12 +27,12 @@ namespace Enemies
         {
             if (_navAgent.enabled && PhasenManager.Instance.betweenPhase)
             {
-                _navAgent.SetDestination(_player.transform.position);
+                _navAgent.SetDestination(transform.position);
                 _animator.SetBool("IsIdle", true);
             }
             else if (_navAgent.enabled && !PhasenManager.Instance.betweenPhase)
             {
-                _navAgent.SetDestination(transform.position);
+                _navAgent.SetDestination(_player.transform.position);
                 _animator.SetBool("IsIdle", false);
             }
                 
