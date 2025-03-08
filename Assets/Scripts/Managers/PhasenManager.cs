@@ -1,3 +1,4 @@
+using System.Collections;
 using Mech;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,8 +53,10 @@ namespace Managers
 
             if (!crystal1 && !endPhase2)
             {
+                player.GetComponent<CharacterController>().enabled = false;
                 player.transform.position = startBossFight.transform.position;
-                phase2.SetActive(false);
+                player.GetComponent<CharacterController>().enabled = true;
+                StartCoroutine(DeactivatePhaseTwo());
                 endPhase2 = true;
                 bossObserver.EndPhase2();
                 betweenPhase = false;
@@ -61,8 +64,10 @@ namespace Managers
 
             if (!crystal2 && !endPhase3)
             {
+                player.GetComponent<CharacterController>().enabled = false;
                 player.transform.position = startBossFight.transform.position;
-                phase3.SetActive(false);
+                player.GetComponent<CharacterController>().enabled = true;
+                StartCoroutine(DeactivatePhaseThree());
                 endPhase3 = true;
                 bossObserver.EndPhase3();
                 betweenPhase = false;
@@ -72,6 +77,18 @@ namespace Managers
             {
                 SceneManager.LoadScene("SpaceStation");
             }
+        }
+
+        private IEnumerator DeactivatePhaseTwo()
+        {
+            yield return new WaitForSeconds(.5f);
+            phase2.SetActive(false);
+        }
+        
+        private IEnumerator DeactivatePhaseThree()
+        {
+            yield return new WaitForSeconds(.5f);
+            phase3.SetActive(false);
         }
 
         public void StartPhase2()
