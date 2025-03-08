@@ -1,5 +1,6 @@
 using Mech;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -65,6 +66,11 @@ namespace Managers
                 endPhase3 = true;
                 bossObserver.EndPhase3();
                 betweenPhase = false;
+            }
+            
+            if (Vector3.Distance(player.transform.position, startBossFight.transform.position) > 500f)
+            {
+                SceneManager.LoadScene("SpaceStation");
             }
         }
 

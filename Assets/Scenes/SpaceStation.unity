@@ -10852,6 +10852,10 @@ PrefabInstance:
       propertyPath: _uiSystem
       value: 
       objectReference: {fileID: 872909725}
+    - target: {fileID: 7361157795981797062, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
+      propertyPath: _bulletDamage
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8691873178804339867, guid: edf3dbab361862b47ae537350d1f0203, type: 3}
       propertyPath: m_Volume
       value: 0.039

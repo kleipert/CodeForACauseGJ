@@ -1,3 +1,4 @@
+using System;
 using Player;
 using UnityEngine;
 
@@ -15,6 +16,17 @@ namespace Managers
                 Destroy(Instance.gameObject);
             }
             Instance = this;
+        }
+
+        private void Start()
+        {
+            LockCursor();
+        }
+
+        private void LockCursor()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         public void MovePlayer(Vector3 dir, float strength)
