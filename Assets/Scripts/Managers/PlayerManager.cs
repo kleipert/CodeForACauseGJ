@@ -1,4 +1,3 @@
-using System;
 using Player;
 using UnityEngine;
 
@@ -43,6 +42,5 @@ namespace Managers
         {
             return _player.transform.position;
         }
-
     }
 }

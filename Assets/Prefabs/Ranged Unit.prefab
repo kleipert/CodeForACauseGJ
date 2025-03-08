@@ -3585,7 +3585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  damage: 50
+  damage: 5
   setAttackCooldown: 5
   canAttack: 0
 --- !u!114 &4519393886393177573

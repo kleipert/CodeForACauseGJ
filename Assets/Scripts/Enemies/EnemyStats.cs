@@ -27,7 +27,7 @@ namespace Enemies
     
         public void ReceiveDamageEnemy(float damage)
         {
-            _health -= damage * PlayerManager.Instance.GetPlayerVelocity();
+            _health -= damage / 2 + (damage / 2 * PlayerManager.Instance.GetPlayerVelocity());
         }
 
         IEnumerator DestroyObject()

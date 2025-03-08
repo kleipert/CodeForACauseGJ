@@ -153,3 +153,4 @@ MonoBehaviour:
   _bulletSpeed: 50
   _maxLifetime: 0.5
   _forceMultiplier: 1
+  _projectileDamage: 25
